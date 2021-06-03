@@ -6,6 +6,8 @@ TagManager:
   tags:
   - CanJump
   - PickUp
+  - Enviorment
+  - Use
   layers:
   - Default
   - TransparentFX

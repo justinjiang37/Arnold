@@ -1,0 +1,21 @@
+Movement:
+    smooth
+    easy to control
+    not many  bindings
+
+I want this game to have a mechanic that seems a little out of the players control
+maybe seems like the player cannot control it as easily
+movement with little less friction
+out of player's control feel
+
+Bindings:
+    A           Left
+    D           Right
+    Space       Jump
+    leftMouse   Use
+    Tab         Show Stats
+
+See what I mean
+Literally 5 bindings
+
+

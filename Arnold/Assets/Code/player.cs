@@ -2,7 +2,6 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
-// using UnityEngine.Classes.Colors;
 public class player : MonoBehaviour {
     [SerializeField]
     private float speed = 5f;
@@ -14,6 +13,8 @@ public class player : MonoBehaviour {
     public InputAction Vertical;
     private Rigidbody rb;
     public SphereCollider sphereCollider2d;
+
+
 
     private bool CanJump = false;
     void Start()
@@ -32,7 +33,6 @@ public class player : MonoBehaviour {
         if (CanJump && Vertical.triggered == true) {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
-
     }
 
     private void OnCollisionEnter(Collision other) {
@@ -41,8 +41,7 @@ public class player : MonoBehaviour {
             Debug.Log(CanJump);
         }
         if (other.gameObject.tag == "PickUp") {
-            // other.gameObject.
-            Debug.Log("EXPLOSION");
+            other.gameObject.SetActive(false);
         }
     }
 
