@@ -6,7 +6,7 @@ I would like to describe "Arnold" as more of an experience than a game. It descr
 ### **Game Play**
 It is extremely easy to control Arnold. As this is more of an experience than a puzzle or action game, there will only be 5 bidings for you to learn.
 
-The game sets in a 3-D platform with Arnold roaming through his day from left to right.
+The game sets in a 3-D platform with Arnold roaming through each scene of his day from left to right.
 
 You will choose what and when he interact with certain objects which will in return have an affect on his Mental Health Statistic Bar shown with the TAB button in game.
 

@@ -32,6 +32,7 @@ public class interact : MonoBehaviour
     private void OnTriggerExit(Collider other) {
         if (other.gameObject.tag == "Use") {
             showUI = false;
+            obj = other.gameObject;
         }
     }
 
