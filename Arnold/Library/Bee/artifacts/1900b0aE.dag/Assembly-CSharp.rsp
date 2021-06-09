@@ -331,11 +331,12 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/VSSettingsProvider.ref.dll"
-"Assets/Code/FillStatBar.cs"
 "Assets/Code/interact.cs"
-"Assets/Code/playerComfort.cs"
+"Assets/Code/NPCCode/WifeScript.cs"
 "Assets/Code/playerControl.cs"
-"Assets/Code/Rotator.cs"
+"Assets/Code/SanityCode/FillStatBar.cs"
+"Assets/Code/SanityCode/playerComfort.cs"
+"Assets/Code/SceneSwitch.cs"
 -langversion:8.0
 
 /deterministic

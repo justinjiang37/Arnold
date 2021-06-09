@@ -5,15 +5,10 @@ using UnityEngine.InputSystem;
 public class playerControl : MonoBehaviour {
     [SerializeField]
     private float speed = 5f;
-    [SerializeField]
-    private float gravity = 9.82f;
-    [SerializeField]
-    private float jumpForce = 3.5f;
     public InputAction Horizontal;
     public InputAction Vertical;
     private Rigidbody rb;
     public SphereCollider sphereCollider2d;
-    private bool CanJump = false;
     void Start()
     {
         rb = GetComponent<Rigidbody>();

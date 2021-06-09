@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class interact : MonoBehaviour
 {
@@ -9,12 +10,22 @@ public class interact : MonoBehaviour
     private GameObject obj;
     public InputAction Use;
     public GameObject text;
+    private int sceneNum = 0;
 
     void Update() {
+        // if player near a interactable
         if (showUI) {
             text.SetActive(true);
             if (Use.triggered) {
-                Debug.Log("hi");
+                // Switch to next scene if door
+                if (obj.name == "SceneSwitchDoor") {
+                    // if reached last scene
+                    if (sceneNum + 1 == 7) {
+                        sceneNum = 0;
+                    }
+                    SceneManager.LoadScene(sceneNum + 1);
+                    sceneNum += 1;
+                }
                 obj.SetActive(false);
                 showUI = false;
             }

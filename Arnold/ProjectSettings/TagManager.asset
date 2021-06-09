@@ -4,10 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - CanJump
   - PickUp
   - Enviorment
   - Use
+  - NPC
   layers:
   - Default
   - TransparentFX
