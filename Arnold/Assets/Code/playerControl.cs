@@ -24,16 +24,6 @@ public class playerControl : MonoBehaviour {
         rb.AddForce(finalVector * speed);
     }
 
-    private void OnCollisionEnter(Collision other) {
-        if (other.gameObject.tag == "PickUp") {
-            other.gameObject.SetActive(false);
-        }
-    }
-
-    private void OnCollisionExit(Collision other) {
-
-    }
-
     private void OnEnable()
     {
         Horizontal.Enable();

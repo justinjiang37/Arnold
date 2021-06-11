@@ -10,7 +10,7 @@ public class interact : MonoBehaviour
     private GameObject obj;
     public InputAction Use;
     public GameObject text;
-    private int sceneNum = 0;
+    public int sceneNum = 1;
 
     void Update() {
         // if player near a interactable
@@ -20,11 +20,12 @@ public class interact : MonoBehaviour
                 // Switch to next scene if door
                 if (obj.name == "SceneSwitchDoor") {
                     // if reached last scene
-                    if (sceneNum + 1 == 7) {
-                        sceneNum = 0;
-                    }
-                    SceneManager.LoadScene(sceneNum + 1);
                     sceneNum += 1;
+                    if (sceneNum == 7) {
+                        sceneNum = 0;
+                        Debug.Log(sceneNum);
+                    }
+                    SceneManager.LoadScene(sceneNum);
                 }
                 obj.SetActive(false);
                 showUI = false;
