@@ -8,6 +8,7 @@ public class SceneManager : MonoBehaviour
 
     public void loadScene(int nextSceneNum)
     {
+        // animation to go through door - > black screen until other side
         UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneNum);
     }
 }

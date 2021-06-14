@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
-public class playerControl : MonoBehaviour {
+public class PlayerControl : MonoBehaviour {
     [SerializeField]
     private float speed = 5f;
     public InputAction Horizontal;
