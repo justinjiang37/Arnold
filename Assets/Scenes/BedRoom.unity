@@ -1069,7 +1069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd02f61f393c97468464a0b366fc13c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 1614055790}
+  sceneManager: {fileID: 378577923}
   Use:
     m_Name: Use
     m_Type: 0
@@ -1088,7 +1088,6 @@ MonoBehaviour:
       m_Flags: 0
   text: {fileID: 1314666815}
   player: {fileID: 1179683453}
-  inRange: 0
 --- !u!1 &1179683453
 GameObject:
   m_ObjectHideFlags: 0
@@ -1506,22 +1505,6 @@ MonoBehaviour:
   maxSanity: 100
   familyToleranceLevel: 0
   workToleranceLevel: 0
-  test:
-    m_Name: Test
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 97237c21-5e65-4d1a-afb0-6402ed48c147
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: d10f4031-9e90-4bce-9780-ac218daa2316
-      m_Path: <Keyboard>/t
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Test
-      m_Flags: 0
   sceneNum: 0
   sceneManager: {fileID: 378577923}
 --- !u!4 &1614055791

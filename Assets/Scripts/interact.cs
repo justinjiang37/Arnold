@@ -5,12 +5,12 @@ using UnityEngine.InputSystem;
 
 public class interact : MonoBehaviour
 {
-    public GameManager manager;
+    public SceneManager sceneManager;
     private GameObject obj;
     public InputAction Use;
     public GameObject text;
     public GameObject player;
-    public bool inRange;
+    private bool inRange;
     private void Start()
     {
         text.SetActive(false);
@@ -21,9 +21,8 @@ public class interact : MonoBehaviour
         {
             if (obj.name == "SceneSwitchDoor")
             {
-                if (Use.triggered)
-                {
-                    manager.loadScene(obj.GetComponent<SceneManager>().nextSceneNum);
+                if (Use.triggered) {
+                    sceneManager.loadScene(obj.GetComponent<SceneManager>().nextSceneNum);
                     inRange = false;
                 }
             }
