@@ -1070,6 +1070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneManager: {fileID: 378577923}
+  gameManager: {fileID: 1614055790}
   Use:
     m_Name: Use
     m_Type: 0
@@ -1505,8 +1506,8 @@ MonoBehaviour:
   maxSanity: 100
   familyToleranceLevel: 0
   workToleranceLevel: 0
-  sceneNum: 0
   sceneManager: {fileID: 378577923}
+  daysPassed: 0
 --- !u!4 &1614055791
 Transform:
   m_ObjectHideFlags: 0
