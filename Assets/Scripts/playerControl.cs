@@ -8,11 +8,11 @@ public class playerControl : MonoBehaviour {
     public InputAction Horizontal;
     public InputAction Vertical;
     private Rigidbody rb;
-    public SphereCollider sphereCollider2d;
+    public CapsuleCollider capsuleCollider2d;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        sphereCollider2d = new SphereCollider();
+        capsuleCollider2d = new CapsuleCollider();
     }
 
     void Update() {
