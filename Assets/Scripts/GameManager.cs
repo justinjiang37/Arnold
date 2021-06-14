@@ -12,15 +12,18 @@ public class GameManager : MonoBehaviour
     public float maxSanity = 100.0f;
     public int familyToleranceLevel = 0;
     public int workToleranceLevel = 0;
-    public int sceneNum = 0;
     public SceneManager sceneManager;
+    public int daysPassed;
 
     void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
     }
-    void Update()
-    {
 
+    public void sleep()
+    {
+        daysPassed += 1;
+        // animation for passing sleeping
     }
+
 }

@@ -3,9 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
 
-public class interact : MonoBehaviour
+public class Interact : MonoBehaviour
 {
     public SceneManager sceneManager;
+    public GameManager gameManager;
     private GameObject obj;
     public InputAction Use;
     public GameObject text;
@@ -24,6 +25,13 @@ public class interact : MonoBehaviour
                 if (Use.triggered) {
                     sceneManager.loadScene(obj.GetComponent<SceneManager>().nextSceneNum);
                     inRange = false;
+                }
+            }
+            if (obj.name == "Bed")
+            {
+                if (Use.triggered)
+                {
+                    gameManager.sleep();
                 }
             }
             else
