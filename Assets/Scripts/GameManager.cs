@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
     public void sleep() {
-        DaysPassed += 1;
+        daysPassed += 1;
         // animation for sleep
         // lighting change when wake up
     }
