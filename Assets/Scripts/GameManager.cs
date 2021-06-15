@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public int familyToleranceLevel = 0;
     public int workToleranceLevel = 0;
     public SceneManager sceneManager;
-    public int DaysPassed;
+    public int daysPassed;
 
     void Awake()
     {
