@@ -24,4 +24,5 @@ public class GameManager : MonoBehaviour
         // animation for sleep
         // lighting change when wake up
     }
+
 }
