@@ -19,11 +19,10 @@ public class GameManager : MonoBehaviour
     {
         DontDestroyOnLoad(this.gameObject);
     }
-
-    public void sleep()
-    {
+    public void sleep() {
         daysPassed += 1;
-        // animation for passing sleeping
+        // animation for sleep
+        // lighting change when wake up
     }
 
 }

@@ -31,6 +31,7 @@ public class Interact : MonoBehaviour
                 if (Use.triggered)
                 {
                     gameManager.sleep();
+                    inRange = false;
                 }
             }
             else

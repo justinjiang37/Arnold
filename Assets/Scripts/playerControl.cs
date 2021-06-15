@@ -2,17 +2,17 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
-public class playerControl : MonoBehaviour {
+public class PlayerControl : MonoBehaviour {
     [SerializeField]
     private float speed = 5f;
     public InputAction Horizontal;
     public InputAction Vertical;
     private Rigidbody rb;
-    public SphereCollider sphereCollider2d;
+    public CapsuleCollider capsuleCollider2d;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        sphereCollider2d = new SphereCollider();
+        capsuleCollider2d = new CapsuleCollider();
     }
 
     void Update() {
