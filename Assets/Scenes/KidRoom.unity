@@ -395,11 +395,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneNum: 3
+  position: {x: -15, y: 2.5, z: 5}
+  UIText: 
   UI: {fileID: 0}
   player: {fileID: 0}
   sceneManage: {fileID: 0}
   gameManager: {fileID: 0}
   interactChecker: {fileID: 0}
+  resetPosition: {fileID: 0}
 --- !u!65 &532496369
 BoxCollider:
   m_ObjectHideFlags: 0

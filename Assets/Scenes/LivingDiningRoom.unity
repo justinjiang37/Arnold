@@ -303,6 +303,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneNum: 0
+  position: {x: 17, y: 2.5, z: 10}
+  UIText: 
+  UI: {fileID: 0}
+  player: {fileID: 0}
+  sceneManage: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!65 &605989061
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -413,6 +419,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneNum: 2
+  position: {x: -7, y: 2.5, z: -7}
+  UIText: 
+  UI: {fileID: 0}
+  player: {fileID: 0}
+  sceneManage: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!65 &809640007
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -619,6 +631,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneNum: 1
+  position: {x: 4, y: 2.5, z: -12}
+  UIText: 
+  UI: {fileID: 0}
+  player: {fileID: 0}
+  sceneManage: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!65 &1147622355
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1014,6 +1032,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneNum: 4
+  position: {x: 0, y: 0, z: 0}
+  UIText: 
+  UI: {fileID: 0}
+  player: {fileID: 0}
+  sceneManage: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!65 &1346980620
 BoxCollider:
   m_ObjectHideFlags: 0

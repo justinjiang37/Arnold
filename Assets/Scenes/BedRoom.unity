@@ -718,12 +718,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddba068d9a765f344a1ab6fb916618f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneNum: 1
+  nextSceneNum: 0
+  position: {x: 0, y: 0, z: 0}
+  UIText: 
   UI: {fileID: 1029824682}
   player: {fileID: 428194948}
   sceneManage: {fileID: 378577922}
   gameManager: {fileID: 1614055789}
-  interactChecker: {fileID: 1123153071}
 --- !u!4 &378577924
 Transform:
   m_ObjectHideFlags: 0
@@ -2302,8 +2303,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneNum: 3
+  position: {x: -25, y: 2.5, z: 0}
+  UIText: To Living Room
   UI: {fileID: 0}
   player: {fileID: 0}
   sceneManage: {fileID: 0}
   gameManager: {fileID: 0}
-  interactChecker: {fileID: 0}
