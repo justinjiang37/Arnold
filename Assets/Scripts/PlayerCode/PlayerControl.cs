@@ -9,7 +9,6 @@ public class PlayerControl : MonoBehaviour {
     public InputAction Vertical;
     private Rigidbody rb;
     public CapsuleCollider capsuleCollider2d;
-
     void Start()
     {
         rb = GetComponent<Rigidbody>();
