@@ -10,7 +10,7 @@ public class Interact : MonoBehaviour
     public InputAction Use;
     public GameObject text;
     public GameObject player;
-    private bool inRange;
+    public bool inRange = false;
     private void Start()
     {
         text.SetActive(false);
@@ -19,10 +19,11 @@ public class Interact : MonoBehaviour
     {
         if (inRange)
         {
+            text.SetActive(true);
             if (obj.name == "SceneSwitchDoor")
             {
                 if (Use.triggered) {
-                    sceneManager.loadScene(obj.GetComponent<SceneManager>().nextSceneNum);
+                    sceneManager.loadScene(obj.GetComponent<SceneManager>().nextSceneNum, obj);
                     inRange = false;
                 }
             }
@@ -42,13 +43,16 @@ public class Interact : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            text.SetActive(false);
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Use")
         {
             inRange = true;
-            text.SetActive(true);
             obj = other.gameObject;
         }
     }
@@ -58,7 +62,6 @@ public class Interact : MonoBehaviour
         if (other.gameObject.tag == "Use")
         {
             inRange = false;
-            text.SetActive(false);
             obj = null;
         }
     }
