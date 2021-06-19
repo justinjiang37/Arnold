@@ -877,7 +877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneNum: 4
-  position: {x: 0, y: 2.5, z: 5}
+  position: {x: 5, y: 2.5, z: 5}
   UIText: 
   UI: {fileID: 0}
   player: {fileID: 0}

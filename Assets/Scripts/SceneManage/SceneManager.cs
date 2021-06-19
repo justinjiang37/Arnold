@@ -13,8 +13,17 @@ public class SceneManager : MonoBehaviour
     public GameObject gameManager;
     public void loadScene(int nextSceneNum, GameObject door)
     {
+        if (nextSceneNum == 5)
+        {
+            changeCamera();
+        }
         // animation to go through door - > black screen until other side
-        UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneNum);
         player.transform.position = door.GetComponent<SceneManager>().position;
+        UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneNum);
+    }
+
+    private void changeCamera()
+    {
+
     }
 }
