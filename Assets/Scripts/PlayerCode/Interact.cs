@@ -27,7 +27,7 @@ public class Interact : MonoBehaviour
                     inRange = false;
                 }
             }
-            if (obj.name == "Bed")
+            else if (obj.name == "Bed")
             {
                 if (Use.triggered)
                 {
