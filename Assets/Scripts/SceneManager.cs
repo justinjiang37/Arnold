@@ -13,20 +13,8 @@ public class SceneManager : MonoBehaviour
     public GameObject gameManager;
     public void loadScene(int nextSceneNum, GameObject door)
     {
-        if (nextSceneNum == 0)
-        {
-            Destroy(UI);
-            Destroy(player);
-            Destroy(sceneManage);
-            Destroy(gameManager);
-            // animation to go through door - > black screen until other side
-            UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneNum);
-        }
-        else
-        {
-            // animation to go through door - > black screen until other side
-            UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneNum);
-            player.transform.position = door.GetComponent<SceneManager>().position;
-        }
+        // animation to go through door - > black screen until other side
+        UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneNum);
+        player.transform.position = door.GetComponent<SceneManager>().position;
     }
 }

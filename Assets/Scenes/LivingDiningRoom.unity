@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddba068d9a765f344a1ab6fb916618f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneNum: 0
+  nextSceneNum: 1
   position: {x: 17, y: 2.5, z: 10}
   UIText: 
   UI: {fileID: 0}
@@ -418,7 +418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddba068d9a765f344a1ab6fb916618f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneNum: 2
+  nextSceneNum: 3
   position: {x: -7, y: 2.5, z: -7}
   UIText: 
   UI: {fileID: 0}
@@ -630,7 +630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddba068d9a765f344a1ab6fb916618f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneNum: 1
+  nextSceneNum: 2
   position: {x: 4, y: 2.5, z: -12}
   UIText: 
   UI: {fileID: 0}
@@ -1031,7 +1031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddba068d9a765f344a1ab6fb916618f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneNum: 4
+  nextSceneNum: 5
   position: {x: 0, y: 0, z: 0}
   UIText: 
   UI: {fileID: 0}
