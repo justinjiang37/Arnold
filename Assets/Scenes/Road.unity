@@ -572,7 +572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0, z: 0}
-  nextSceneNum: 4
+  nextSceneNum: 6
 --- !u!1 &1415051064
 GameObject:
   m_ObjectHideFlags: 0
