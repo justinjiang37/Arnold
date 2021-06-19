@@ -6,13 +6,12 @@ public class RoadLoadScene : MonoBehaviour
 {
     private int nextSceneNum;
     public GameObject player;
-    private GameObject trigger;
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.name == "LoadSceneTrigger")
         {
-            nextSceneNum = trigger.GetComponent<RoadTrigger>().nextSceneNum;
+            nextSceneNum = other.gameObject.GetComponent<RoadTrigger>().nextSceneNum;
             UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneNum);
-            player.transform.position = trigger.GetComponent<RoadTrigger>().position;
+            player.transform.position = other.gameObject.GetComponent<RoadTrigger>().position;
         }
     }
 }
