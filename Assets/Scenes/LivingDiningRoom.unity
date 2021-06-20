@@ -303,7 +303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneNum: 1
-  position: {x: 17, y: 2.5, z: 10}
+  position: {x: 17, y: 1, z: 10}
   UIText: 
   UI: {fileID: 0}
   player: {fileID: 0}
@@ -419,7 +419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneNum: 3
-  position: {x: -7, y: 2.5, z: -7}
+  position: {x: -7, y: 1, z: -7}
   UIText: 
   UI: {fileID: 0}
   player: {fileID: 0}
@@ -631,7 +631,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneNum: 2
-  position: {x: 4, y: 2.5, z: -12}
+  position: {x: 4, y: 1, z: -12}
   UIText: 
   UI: {fileID: 0}
   player: {fileID: 0}
