@@ -7,6 +7,7 @@ public class Interact : MonoBehaviour
 {
     public SceneManager sceneManager;
     public GameManager gameManager;
+    public GameObject NPCManager;
     private GameObject obj;
     public InputAction Use;
     public Text interactText;
@@ -37,11 +38,11 @@ public class Interact : MonoBehaviour
                     inRange = false;
                 }
             }
-            else
+            else if (obj.tag == "NPC")
             {
                 if (Use.triggered)
                 {
-                    obj.SetActive(false);
+                    NPCManager.GetComponent<NPCManager>().displayDialogue(obj.name);
                 }
             }
         }

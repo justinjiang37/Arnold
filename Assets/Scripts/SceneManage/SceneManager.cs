@@ -12,12 +12,32 @@ public class SceneManager : MonoBehaviour
     public GameObject sceneManage;
     public GameObject gameManager;
     public Animator transition;
+
     public void loadScene(int nextSceneNum, Vector3 newPosition)
     {
         StartCoroutine(LoadNextScene(nextSceneNum, newPosition));
     }
 
     IEnumerator LoadNextScene(int nextSceneNum, Vector3 newPosition)
+    {
+        transition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(1);
+        player.transform.position = newPosition;
+        UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneNum);
+
+        transition.SetTrigger("End");
+    }
+
+////////////////////////////////////////////////////
+////////// Start Animation will be DIFFERENT ///////
+////////////////////////////////////////////////////
+    public void loadStartScene(int nextSceneNum, Vector3 newPosition)
+    {
+        StartCoroutine(LoadStartScene(nextSceneNum, newPosition));
+    }
+
+    IEnumerator LoadStartScene(int nextSceneNum, Vector3 newPosition)
     {
         transition.SetTrigger("Start");
 
