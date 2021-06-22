@@ -25,7 +25,7 @@ public class Interact : MonoBehaviour
             if (obj.name == "SceneSwitchDoor")
             {
                 if (Use.triggered) {
-                    sceneManager.loadScene(obj.GetComponent<SceneManager>().nextSceneNum, obj);
+                    sceneManager.loadScene(obj.GetComponent<SceneManager>().nextSceneNum, obj.GetComponent<SceneManager>().position);
                     inRange = false;
                 }
             }

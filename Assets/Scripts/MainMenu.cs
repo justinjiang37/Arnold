@@ -7,9 +7,8 @@ public class MainMenu : MonoBehaviour
     public GameObject title;
     public GameObject startButton;
     public GameObject sceneManager;
-    public GameObject start;
     public void PlayGame () {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        sceneManager.GetComponent<SceneManager>().loadScene(1, new Vector3(0,1,0));
         title.SetActive(false);
         startButton.SetActive(false);
     }
