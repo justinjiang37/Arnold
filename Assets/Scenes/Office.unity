@@ -2223,8 +2223,8 @@ Transform:
   - {fileID: 7263150}
   - {fileID: 186358883}
   - {fileID: 690860045}
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_Father: {fileID: 1586539312}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &954899582
 GameObject:
@@ -3964,6 +3964,7 @@ Transform:
   - {fileID: 2108659554}
   - {fileID: 1259292888}
   - {fileID: 432358684}
+  - {fileID: 930815664}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5782,7 +5783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextSceneNum: 4
   position: {x: 26, y: 1, z: 0}
-  UIText: 
+  UIText: Home
   UI: {fileID: 0}
   player: {fileID: 0}
   sceneManage: {fileID: 0}
