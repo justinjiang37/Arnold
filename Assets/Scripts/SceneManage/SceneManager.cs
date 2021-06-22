@@ -14,10 +14,6 @@ public class SceneManager : MonoBehaviour
     public Animator transition;
     public void loadScene(int nextSceneNum, Vector3 newPosition)
     {
-        if (nextSceneNum == 5)
-        {
-            changeCamera();
-        }
         StartCoroutine(LoadNextScene(nextSceneNum, newPosition));
     }
 
@@ -28,9 +24,7 @@ public class SceneManager : MonoBehaviour
         yield return new WaitForSeconds(1);
         player.transform.position = newPosition;
         UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneNum);
-    }
-    private void changeCamera()
-    {
 
+        transition.SetTrigger("End");
     }
 }
