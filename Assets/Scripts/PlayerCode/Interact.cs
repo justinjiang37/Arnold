@@ -2,28 +2,30 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 public class Interact : MonoBehaviour
 {
     public SceneManager sceneManager;
     public GameManager gameManager;
     private GameObject obj;
     public InputAction Use;
-    public GameObject text;
+    public Text interactText;
     public GameObject player;
     public bool inRange = false;
     private void Start()
     {
-        text.SetActive(false);
+        interactText.gameObject.SetActive(false);
     }
     void Update()
     {
         if (inRange)
         {
-            text.SetActive(true);
+            interactText.text = obj.GetComponent<SceneManager>().UIText;
+            interactText.gameObject.SetActive(true);
             if (obj.name == "SceneSwitchDoor")
             {
                 if (Use.triggered) {
-                    sceneManager.loadScene(obj.GetComponent<SceneManager>().nextSceneNum, obj);
+                    sceneManager.loadScene(obj.GetComponent<SceneManager>().nextSceneNum, obj.GetComponent<SceneManager>().position);
                     inRange = false;
                 }
             }
@@ -45,7 +47,7 @@ public class Interact : MonoBehaviour
         }
         else
         {
-            text.SetActive(false);
+            interactText.gameObject.SetActive(false);
         }
     }
     private void OnTriggerEnter(Collider other)

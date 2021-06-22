@@ -304,7 +304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextSceneNum: 1
   position: {x: 17, y: 1, z: 10}
-  UIText: 
+  UIText: Bedroom
   UI: {fileID: 0}
   player: {fileID: 0}
   sceneManage: {fileID: 0}
@@ -420,7 +420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextSceneNum: 3
   position: {x: -7, y: 1, z: -7}
-  UIText: 
+  UIText: Bathroom
   UI: {fileID: 0}
   player: {fileID: 0}
   sceneManage: {fileID: 0}
@@ -632,7 +632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextSceneNum: 2
   position: {x: 4, y: 1, z: -12}
-  UIText: 
+  UIText: Kidsroom
   UI: {fileID: 0}
   player: {fileID: 0}
   sceneManage: {fileID: 0}
@@ -1033,7 +1033,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextSceneNum: 5
   position: {x: -45.5, y: 1, z: 0}
-  UIText: 
+  UIText: Work
   UI: {fileID: 0}
   player: {fileID: 0}
   sceneManage: {fileID: 0}
