@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NPCManager : MonoBehaviour
 {
-    public GameObject gameManager;
+    public GameObject sceneManager;
     public GameObject Wife;
     public GameObject Child;
     public GameObject Boss;
@@ -23,5 +23,35 @@ public class NPCManager : MonoBehaviour
         {
             Boss.GetComponent<BossScript>().showDialogue();
         }
+    }
+
+    public void resetPositions()
+    {
+        Debug.Log("hi");
+        if (Wife.GetComponent<WifeScript>().setPosition() == sceneManager.GetComponent<SceneManager>().currentSceneNum)
+        {
+            Wife.SetActive(true);
+        }
+        else
+        {
+            Wife.SetActive(false);
+        }
+        // if (Child.GetComponent<ChildScript>().setPosition() == sceneManager.GetComponent<SceneManager>().currentSceneNum)
+        // {
+        //     Child.SetActive(true);
+        // }
+        // else
+        // {
+        //     Child.SetActive(false);
+        // }
+        // if (Boss.GetComponent<BossScript>().setPosition() == sceneManager.GetComponent<SceneManager>().currentSceneNum)
+        // {
+        //     Boss.SetActive(true);
+        // }
+        // else
+        // {
+        //     Boss.SetActive(false);
+        // }
+
     }
 }

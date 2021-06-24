@@ -6,6 +6,7 @@ public class ChildScript : MonoBehaviour
 {
     // Tolerance on Arnold
     private int tolerance = 30;
+    Vector3 position = new Vector3();
 
     public void showDialogue()
     {
@@ -24,6 +25,32 @@ public class ChildScript : MonoBehaviour
         else if (tolerance <= 0)
         {
             levelZero();
+        }
+    }
+    public int setPosition()
+    {
+        if (tolerance >= 20)
+        {
+            position = new Vector3(2, 1, 2);
+            this.gameObject.transform.position = position;
+            return 1;
+        }
+        else if (tolerance >= 10 && tolerance < 20)
+        {
+            position = new Vector3(0, 5, 0);
+            this.gameObject.transform.position = position;
+            return 2;
+        }
+        else if (tolerance > 0 && tolerance < 10)
+        {
+            position = new Vector3(0, 5, 0);
+            this.gameObject.transform.position = position;
+            return 4;
+        }
+        else
+        {
+            // follow
+            return 0;
         }
     }
     public void levelThree()

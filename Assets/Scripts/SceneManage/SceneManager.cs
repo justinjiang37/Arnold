@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SceneManager : MonoBehaviour
 {
+    public int currentSceneNum;
     public int nextSceneNum;
     public Vector3 position;
     public string UIText;
@@ -11,6 +12,7 @@ public class SceneManager : MonoBehaviour
     public GameObject player;
     public GameObject sceneManage;
     public GameObject gameManager;
+    public GameObject npcManager;
     public Animator transition;
 
     public void loadScene(int nextSceneNum, Vector3 newPosition)
@@ -24,6 +26,8 @@ public class SceneManager : MonoBehaviour
 
         yield return new WaitForSeconds(1);
         player.transform.position = newPosition;
+        currentSceneNum = nextSceneNum;
+        npcManager.GetComponent<NPCManager>().resetPositions();
         UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneNum);
 
         transition.SetTrigger("End");
@@ -43,6 +47,8 @@ public class SceneManager : MonoBehaviour
 
         yield return new WaitForSeconds(1);
         player.transform.position = newPosition;
+        currentSceneNum = nextSceneNum;
+        npcManager.GetComponent<NPCManager>().resetPositions();
         UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneNum);
 
         transition.SetTrigger("End");

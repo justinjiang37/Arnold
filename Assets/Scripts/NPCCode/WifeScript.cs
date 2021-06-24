@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.Collections.Specialized;
+using UnityEngine.SceneManagement;
 public class WifeScript : MonoBehaviour
 {
     // the string is the possible dialogue that the wife says when interacted
@@ -21,17 +22,18 @@ public class WifeScript : MonoBehaviour
         "It's alright, I'll keep it in check.",
         "What do YOU know about him.",
     };
-    public List<int> wifeLevelThreeEffect = new List<int>() { 5, 9, 4, 12};
+    public List<int> wifeLevelThreeEffect = new List<int>() { 5, 9, 4, 12 };
 
 
     // Wife Tolerance on Arnold
     private int tolerance = 30;
-    public GameObject gameManager;
     Vector3 position = new Vector3();
-    void Start() {
+
+    public void showDialogue()
+    {
         if (tolerance >= 20)
         {
-            position = new Vector3(0, 5, 0);
+            levelThree();
         }
         else if (tolerance >= 10 && tolerance < 20)
         {
@@ -45,24 +47,36 @@ public class WifeScript : MonoBehaviour
         {
             levelZero();
         }
-        this.gameObject.transform.position = position;
     }
 
-    public void showDialogue() {
-        if (tolerance >= 20) {
-            levelThree();
+    public int setPosition()
+    {
+        if (tolerance >= 20)
+        {
+            Debug.Log("hiahds");
+            position = new Vector3(16.5f, 1, -5);
+            this.gameObject.transform.position = position;
+            return 1;
         }
-        else if (tolerance >= 10 && tolerance < 20) {
-            levelTwo();
+        else if (tolerance >= 10 && tolerance < 20)
+        {
+            position = new Vector3(0, 5, 0);
+            this.gameObject.transform.position = position;
+            return 2;
         }
-        else if (tolerance > 0 && tolerance < 10) {
-            levelOne();
+        else if (tolerance > 0 && tolerance < 10)
+        {
+            position = new Vector3(0, 5, 0);
+            this.gameObject.transform.position = position;
+            return 4;
         }
-        else if (tolerance <= 0) {
-            levelZero();
+        else
+        {
+            // follow
+            return 0;
         }
     }
-    public void levelThree ()
+    public void levelThree()
     {
     }
     public void levelTwo()

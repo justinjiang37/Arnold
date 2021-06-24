@@ -347,6 +347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddba068d9a765f344a1ab6fb916618f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentSceneNum: 0
   nextSceneNum: 0
   position: {x: 0, y: 0, z: 0}
   UIText: 
@@ -354,6 +355,7 @@ MonoBehaviour:
   player: {fileID: 1508733263}
   sceneManage: {fileID: 432679726}
   gameManager: {fileID: 16268209}
+  npcManager: {fileID: 1305612720}
   transition: {fileID: 936581923}
 --- !u!114 &432679728
 MonoBehaviour:
@@ -570,7 +572,6 @@ GameObject:
   - component: {fileID: 845818038}
   - component: {fileID: 845818037}
   - component: {fileID: 845818036}
-  - component: {fileID: 845818039}
   - component: {fileID: 845818040}
   m_Layer: 0
   m_Name: Child
@@ -614,7 +615,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 845818034}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -657,18 +658,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 845818034}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &845818039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 845818034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc47d8d8b4075c340a46a3f62da23278, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &845818040
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -697,7 +686,6 @@ GameObject:
   - component: {fileID: 852661288}
   - component: {fileID: 852661287}
   - component: {fileID: 852661286}
-  - component: {fileID: 852661289}
   - component: {fileID: 852661290}
   m_Layer: 0
   m_Name: Boss
@@ -741,7 +729,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 852661284}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -784,18 +772,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 852661284}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &852661289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 852661284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91bc3a7fe595a214abde6c1e4815aefb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &852661290
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1435,7 +1411,6 @@ MonoBehaviour:
   - It's alright, I'll keep it in check.
   - What do YOU know about him.
   wifeLevelThreeEffect: 0500000009000000040000000c000000
-  gameManager: {fileID: 0}
 --- !u!54 &1159583848
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1450,7 +1425,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1 &1200222603
 GameObject:
@@ -1590,7 +1565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb60e6c94a966fa46945a14e40d35d84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 16268209}
+  sceneManager: {fileID: 432679726}
   Wife: {fileID: 1159583842}
   Child: {fileID: 845818034}
   Boss: {fileID: 852661284}
