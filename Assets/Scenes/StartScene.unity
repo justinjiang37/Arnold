@@ -1118,7 +1118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneManager: {fileID: 432679727}
   gameManager: {fileID: 16268210}
-  NPCManager: {fileID: 0}
+  NPCManager: {fileID: 1305612720}
   Use:
     m_Name: Use
     m_Type: 0
@@ -1308,9 +1308,10 @@ GameObject:
   - component: {fileID: 1159583844}
   - component: {fileID: 1159583847}
   - component: {fileID: 1159583848}
+  - component: {fileID: 1159583849}
   m_Layer: 0
   m_Name: Wife
-  m_TagString: Untagged
+  m_TagString: Use
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1405,6 +1406,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 649feb415afd095498f39645db66f031, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wifeLevelThreeDialogue:
+  - "Hey honey, Don't flip with Henry alright? We you're income right now for the
+    mortgage. \n Just learn to put up with him for now."
+  - Are you sure you want to go to work today? Henry doesn't seem to be putting up
+    with you.
+  wifeLevelThreeDialogueEffect: 3200000045000000
   wifeLevelThreeResponse:
   - I'll take care of things on that end, don't worry about it.
   - I know moneys tight! You don't need to keep annoying me about it!
@@ -1427,6 +1434,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &1159583849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159583842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddba068d9a765f344a1ab6fb916618f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSceneNum: 0
+  nextSceneNum: 0
+  position: {x: 0, y: 0, z: 0}
+  UIText: Interact with Wife
+  UI: {fileID: 0}
+  player: {fileID: 0}
+  sceneManage: {fileID: 0}
+  gameManager: {fileID: 0}
+  npcManager: {fileID: 0}
+  transition: {fileID: 0}
 --- !u!1 &1200222603
 GameObject:
   m_ObjectHideFlags: 0
@@ -1569,6 +1598,7 @@ MonoBehaviour:
   Wife: {fileID: 1159583842}
   Child: {fileID: 845818034}
   Boss: {fileID: 852661284}
+  isInteracting: 0
 --- !u!1 &1309228355
 GameObject:
   m_ObjectHideFlags: 0

@@ -38,7 +38,7 @@ public class Interact : MonoBehaviour
                     inRange = false;
                 }
             }
-            else if (obj.tag == "NPC")
+            else if (obj.name == "Wife" || obj.name == "Kid" || obj.name == "Boss")
             {
                 if (Use.triggered)
                 {
