@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using TMPro;
 
 public class NPCManager : MonoBehaviour
 {
@@ -9,9 +11,18 @@ public class NPCManager : MonoBehaviour
     public GameObject Child;
     public GameObject Boss;
     public bool isInteracting;
+    public GameObject chooseQ;
+    public GameObject chooseE;
     // keep track of positions
+    private void Start() {
+        chooseE.SetActive(false);
+        chooseQ.SetActive(false);
+    }
     public void displayDialogue(string name)
     {
+        isInteracting = true;
+        chooseE.SetActive(true);
+        chooseQ.SetActive(true);
         if (name == "Wife")
         {
             Wife.GetComponent<WifeScript>().showDialogue();

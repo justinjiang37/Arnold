@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+
 public class WifeScript : MonoBehaviour
 {
     // the string is the possible dialogue that the wife says when interacted
@@ -25,8 +27,36 @@ public class WifeScript : MonoBehaviour
 
     // Wife Tolerance on Arnold
     private int tolerance = 30;
+    public GameObject npcManager;
     Vector3 position = new Vector3();
     private int dialogueNum; // determines which
+    public InputAction Q;
+    public InputAction E;
+
+
+    private void Start() {
+        this.gameObject.SetActive(false);
+    }
+
+    private void Update() {
+        if (npcManager.GetComponent<NPCManager>().isInteracting) {
+            if (Q.triggered) {
+                // chose left option
+                Debug.Log("chose left");
+                npcManager.GetComponent<NPCManager>().isInteracting = false;
+            }
+            else if (E.triggered) {
+                // chose right option
+                Debug.Log("chose right");
+                npcManager.GetComponent<NPCManager>().isInteracting = false;
+            }
+        }
+        else
+        {
+            npcManager.GetComponent<NPCManager>().chooseQ.SetActive(false);
+            npcManager.GetComponent<NPCManager>().chooseE.SetActive(false);
+        }
+    }
 
     public void showDialogue()
     {
@@ -78,7 +108,6 @@ public class WifeScript : MonoBehaviour
     {
         dialogueNum = Random.Range(0, 2);
         Debug.Log(wifeLevelThreeDialogue[dialogueNum]);
-        Debug.Log(wifeLevelThreeDialogueEffect[dialogueNum]);
         if(dialogueNum == 0) {
             Debug.Log(wifeLevelThreeResponse[0]);
             Debug.Log(wifeLevelThreeResponse[1]);
@@ -108,6 +137,17 @@ public class WifeScript : MonoBehaviour
     public void changeArnoldTolerance()
     {
 
+    }
+    private void OnEnable()
+    {
+        Q.Enable();
+        E.Enable();
+    }
+
+    private void OnDisable()
+    {
+        Q.Disable();
+        E.Disable();
     }
 
 }

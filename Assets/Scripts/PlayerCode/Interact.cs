@@ -38,11 +38,13 @@ public class Interact : MonoBehaviour
                     inRange = false;
                 }
             }
-            else if (obj.name == "Wife" || obj.name == "Kid" || obj.name == "Boss")
+            else if ((obj.name == "Wife" || obj.name == "Kid" || obj.name == "Boss"))
             {
+                // implement method to only allow to interact once
                 if (Use.triggered)
                 {
                     NPCManager.GetComponent<NPCManager>().displayDialogue(obj.name);
+                    inRange = false;
                 }
             }
         }
