@@ -18,6 +18,18 @@ public class NPCManager : MonoBehaviour
         chooseE.SetActive(false);
         chooseQ.SetActive(false);
     }
+    public bool NPCinteract (GameObject obj) {
+        if (obj.name == "Wife" && !Wife.GetComponent<WifeScript>().interacted) {
+            return true;
+        }
+        return false;
+        // else if (obj.name = "Child") {
+
+        // }
+        // else if (obj.name = "Boss" && ) {
+
+        // }
+    }
     public void displayDialogue(string name)
     {
         isInteracting = true;
@@ -47,5 +59,9 @@ public class NPCManager : MonoBehaviour
         {
             Wife.SetActive(false);
         }
+    }
+
+    public void changeInteracted() {
+        Wife.GetComponent<WifeScript>().interacted = false;
     }
 }

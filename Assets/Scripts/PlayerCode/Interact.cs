@@ -22,9 +22,9 @@ public class Interact : MonoBehaviour
         if (inRange)
         {
             interactText.text = obj.GetComponent<SceneManager>().UIText;
-            interactText.gameObject.SetActive(true);
             if (obj.name == "SceneSwitchDoor")
             {
+                interactText.gameObject.SetActive(true);
                 if (Use.triggered) {
                     sceneManager.loadScene(obj.GetComponent<SceneManager>().nextSceneNum, obj.GetComponent<SceneManager>().position);
                     inRange = false;
@@ -32,14 +32,16 @@ public class Interact : MonoBehaviour
             }
             else if (obj.name == "Bed")
             {
+                interactText.gameObject.SetActive(true);
                 if (Use.triggered)
                 {
                     gameManager.sleep();
                     inRange = false;
                 }
             }
-            else if ((obj.name == "Wife" || obj.name == "Kid" || obj.name == "Boss"))
+            else if (NPCManager.GetComponent<NPCManager>().NPCinteract(obj))
             {
+                interactText.gameObject.SetActive(true);
                 // implement method to only allow to interact once
                 if (Use.triggered)
                 {

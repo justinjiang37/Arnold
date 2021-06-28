@@ -30,6 +30,7 @@ public class WifeScript : MonoBehaviour
     public GameObject npcManager;
     Vector3 position = new Vector3();
     private int dialogueNum; // determines which
+    public bool interacted = false;
     public InputAction Q;
     public InputAction E;
 
@@ -43,11 +44,13 @@ public class WifeScript : MonoBehaviour
             if (Q.triggered) {
                 // chose left option
                 Debug.Log("chose left");
+                interacted = true;
                 npcManager.GetComponent<NPCManager>().isInteracting = false;
             }
             else if (E.triggered) {
                 // chose right option
                 Debug.Log("chose right");
+                interacted = true;
                 npcManager.GetComponent<NPCManager>().isInteracting = false;
             }
         }
