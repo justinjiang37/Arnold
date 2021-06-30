@@ -33,6 +33,7 @@ public class WifeScript : MonoBehaviour
     public bool interacted = false;
     public InputAction Q;
     public InputAction E;
+    public GameObject textWriter;
 
 
     private void Start() {
@@ -40,24 +41,23 @@ public class WifeScript : MonoBehaviour
     }
 
     private void Update() {
+        // This is for updating the different tolerance levels NOT showing UI
+        // All UI code in endorsed in side of the different lvel functions and tghe TextWriter Script
         if (npcManager.GetComponent<NPCManager>().isInteracting) {
             if (Q.triggered) {
+                npcManager.GetComponent<NPCManager>().destroyUI();
                 // chose left option
                 Debug.Log("chose left");
                 interacted = true;
                 npcManager.GetComponent<NPCManager>().isInteracting = false;
             }
             else if (E.triggered) {
+                npcManager.GetComponent<NPCManager>().destroyUI();
                 // chose right option
                 Debug.Log("chose right");
                 interacted = true;
                 npcManager.GetComponent<NPCManager>().isInteracting = false;
             }
-        }
-        else
-        {
-            npcManager.GetComponent<NPCManager>().chooseQ.SetActive(false);
-            npcManager.GetComponent<NPCManager>().chooseE.SetActive(false);
         }
     }
 
@@ -110,14 +110,14 @@ public class WifeScript : MonoBehaviour
     public void levelThree()
     {
         dialogueNum = Random.Range(0, 2);
-        Debug.Log(wifeLevelThreeDialogue[dialogueNum]);
+        // call text Writer
         if(dialogueNum == 0) {
-            Debug.Log(wifeLevelThreeResponse[0]);
-            Debug.Log(wifeLevelThreeResponse[1]);
+            string[] temp = {wifeLevelThreeDialogue[0], wifeLevelThreeResponse[0], wifeLevelThreeResponse[1]};
+            textWriter.GetComponent<TextWriter>().ShowText(temp);
         }
         else {
-            Debug.Log(wifeLevelThreeResponse[2]);
-            Debug.Log(wifeLevelThreeResponse[3]);
+            string[] temp = { wifeLevelThreeDialogue[1], wifeLevelThreeResponse[2], wifeLevelThreeResponse[3] };
+            textWriter.GetComponent<TextWriter>().ShowText(temp);
         }
     }
     public void levelTwo()

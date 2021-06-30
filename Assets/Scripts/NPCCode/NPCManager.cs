@@ -13,28 +13,28 @@ public class NPCManager : MonoBehaviour
     public bool isInteracting;
     public GameObject chooseQ;
     public GameObject chooseE;
+    public GameObject NPCDialogue;
     // keep track of positions
     private void Start() {
         chooseE.SetActive(false);
         chooseQ.SetActive(false);
+        NPCDialogue.SetActive(false);
+    }
+    public void destroyUI() {
+        chooseE.SetActive(false);
+        chooseQ.SetActive(false);
+        NPCDialogue.SetActive(false);
     }
     public bool NPCinteract (GameObject obj) {
         if (obj.name == "Wife" && !Wife.GetComponent<WifeScript>().interacted) {
             return true;
         }
         return false;
-        // else if (obj.name = "Child") {
-
-        // }
-        // else if (obj.name = "Boss" && ) {
-
-        // }
     }
+
     public void displayDialogue(string name)
     {
         isInteracting = true;
-        chooseE.SetActive(true);
-        chooseQ.SetActive(true);
         if (name == "Wife")
         {
             Wife.GetComponent<WifeScript>().showDialogue();
