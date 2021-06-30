@@ -13,12 +13,15 @@ public class TextWriter : MonoBehaviour
     public GameObject chooseE;
     public GameObject NPCDialogue;
     public GameObject NPCManager;
+    public GameObject darkenScript;
 
     public void ShowText(string[] dialogue) {
         StartCoroutine(WritingEffect(dialogue));
     }
     IEnumerator WritingEffect(string[] dialogue)
     {
+        darkenScript.GetComponent<DarkenScript>().Darken();
+        yield return new WaitForSeconds(1.5f);
         NPCManager.GetComponent<NPCManager>().finishedWritingEffect = false;
         for (int z = 0; z < 3; z++) {
             fullText = dialogue[z];

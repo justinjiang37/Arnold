@@ -34,6 +34,7 @@ public class WifeScript : MonoBehaviour
     public InputAction Q;
     public InputAction E;
     public GameObject textWriter;
+    public GameObject darkenScript;
 
 
     private void Start() {
@@ -50,6 +51,7 @@ public class WifeScript : MonoBehaviour
                 Debug.Log("chose left");
                 interacted = true;
                 npcManager.GetComponent<NPCManager>().isInteracting = false;
+                darkenScript.GetComponent<DarkenScript>().Lighten();
             }
             else if (E.triggered && npcManager.GetComponent<NPCManager>().finishedWritingEffect) {
                 npcManager.GetComponent<NPCManager>().destroyUI();
@@ -57,6 +59,7 @@ public class WifeScript : MonoBehaviour
                 Debug.Log("chose right");
                 interacted = true;
                 npcManager.GetComponent<NPCManager>().isInteracting = false;
+                darkenScript.GetComponent<DarkenScript>().Lighten();
             }
         }
     }
