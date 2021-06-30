@@ -29,7 +29,9 @@ public class SceneManager : MonoBehaviour
         currentSceneNum = nextSceneNum;
         npcManager.GetComponent<NPCManager>().resetPositions();
         UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneNum);
-        npcManager.GetComponent<NPCManager>().changeInteracted();
+        if (nextSceneNum == 5) {
+            npcManager.GetComponent<NPCManager>().changeInteracted();
+        }
 
         transition.SetTrigger("End");
     }

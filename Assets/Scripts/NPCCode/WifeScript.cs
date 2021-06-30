@@ -44,14 +44,14 @@ public class WifeScript : MonoBehaviour
         // This is for updating the different tolerance levels NOT showing UI
         // All UI code in endorsed in side of the different lvel functions and tghe TextWriter Script
         if (npcManager.GetComponent<NPCManager>().isInteracting) {
-            if (Q.triggered) {
+            if (Q.triggered && npcManager.GetComponent<NPCManager>().finishedWritingEffect) {
                 npcManager.GetComponent<NPCManager>().destroyUI();
                 // chose left option
                 Debug.Log("chose left");
                 interacted = true;
                 npcManager.GetComponent<NPCManager>().isInteracting = false;
             }
-            else if (E.triggered) {
+            else if (E.triggered && npcManager.GetComponent<NPCManager>().finishedWritingEffect) {
                 npcManager.GetComponent<NPCManager>().destroyUI();
                 // chose right option
                 Debug.Log("chose right");

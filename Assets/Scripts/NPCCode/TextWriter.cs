@@ -12,12 +12,14 @@ public class TextWriter : MonoBehaviour
     public GameObject chooseQ;
     public GameObject chooseE;
     public GameObject NPCDialogue;
+    public GameObject NPCManager;
 
     public void ShowText(string[] dialogue) {
         StartCoroutine(WritingEffect(dialogue));
     }
     IEnumerator WritingEffect(string[] dialogue)
     {
+        NPCManager.GetComponent<NPCManager>().finishedWritingEffect = false;
         for (int z = 0; z < 3; z++) {
             fullText = dialogue[z];
             for (int i = 0; i <= fullText.Length; i++)
@@ -39,7 +41,8 @@ public class TextWriter : MonoBehaviour
                 }
                 yield return new WaitForSeconds(delay);
             }
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1);
         }
+        NPCManager.GetComponent<NPCManager>().finishedWritingEffect = true;
     }
 }

@@ -14,6 +14,7 @@ public class NPCManager : MonoBehaviour
     public GameObject chooseQ;
     public GameObject chooseE;
     public GameObject NPCDialogue;
+    public bool finishedWritingEffect = false;
     // keep track of positions
     private void Start() {
         chooseE.SetActive(false);
