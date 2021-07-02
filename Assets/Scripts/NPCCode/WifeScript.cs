@@ -6,14 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class WifeScript : MonoBehaviour
 {
+
+    // LEVEL 3
     // the string is the possible dialogue that the wife says when interacted
-    // the int at the end is the decrease in Arnold's sanity level when said
     public List<string> wifeLevelThreeDialogue = new List<string>()
     {
-        "Hey honey, Don't flip with Henry alright? We you're income right now for the mortgage. \n Just learn to put up with him for now.",
+        "Hey honey, Don't flip with Henry alright? We you're income right now for the mortgage. Just learn to put up with him for now.",
         "Are you sure you want to go to work today? Henry doesn't seem to be putting up with you."
     };
-    public List<int> wifeLevelThreeDialogueEffect = new List<int>(){50, 69};
+    // Affect on Arnold
+    public List<int> wifeLevelThreeDialogueEffect = new List<int>(){18, 20};
     // last int of each dict represents the amount that the wife's tolerance ON anrold will decrease
     public List<string> wifeLevelThreeResponse = new List<string>()
     {
@@ -23,7 +25,43 @@ public class WifeScript : MonoBehaviour
         "It's alright, I'll keep it in check.",
         "What do YOU know about him.",
     };
-    public List<int> wifeLevelThreeEffect = new List<int>(){5, 9, 4, 12};
+    // Affect on Wife
+    public List<int> wifeLevelThreeEffect = new List<int>(){6, 10, 5, 12};
+
+    // LEVEL 2
+    public List<string> wifeLevelTwoDialogue = new List<string>()
+    {
+        "There's a new spa that opened up down town. Tifanny and I are going to enjoy our selves today.",
+        "You look like you need a hair cut."
+    };
+    public List<int> wifeLevelTwoDialogueEffect = new List<int>() { 23, 21 };
+    public List<string> wifeLevelTwoResponse = new List<string>()
+    {
+
+        "I'm not made of money, you know.",
+        "Watch how much you spend.",
+        "I hate people touching my hair.",
+        "It looks fine to me.",
+    };
+    public List<int> wifeLevelTwoEffect = new List<int>() { 7, 9, 8, 4 };
+
+    // LEVEL 1
+    public List<string> wifeLevelOneDialogue = new List<string>()
+    {
+        "Why can't you get a promotion?",
+        "I wish you were more like Tiffany's husband."
+    };
+    public List<int> wifeLevelOneDialogueEffect = new List<int>() { 27, 30 };
+    // last int of each dict represents the amount that the wife's tolerance ON anrold will decrease
+    public List<string> wifeLevelOneResponse = new List<string>()
+    {
+
+        "SHUT UP!",
+        "Stop acting like a bitch.",
+        "Why can't YOU act more like Tiffany?",
+        "You've changed...",
+    };
+    public List<int> wifeLevelOneEffect = new List<int>() { 12, 15, 12, 8 };
 
     // Wife Tolerance on Arnold
     private int tolerance = 30;
@@ -125,11 +163,33 @@ public class WifeScript : MonoBehaviour
     }
     public void levelTwo()
     {
-
+        dialogueNum = Random.Range(0, 2);
+        // call text Writer
+        if (dialogueNum == 0)
+        {
+            string[] temp = { wifeLevelTwoDialogue[0], wifeLevelTwoResponse[0], wifeLevelTwoResponse[1] };
+            textWriter.GetComponent<TextWriter>().ShowText(temp);
+        }
+        else
+        {
+            string[] temp = { wifeLevelTwoDialogue[1], wifeLevelTwoResponse[2], wifeLevelTwoResponse[3] };
+            textWriter.GetComponent<TextWriter>().ShowText(temp);
+        }
     }
     public void levelOne()
     {
-
+        dialogueNum = Random.Range(0, 2);
+        // call text Writer
+        if (dialogueNum == 0)
+        {
+            string[] temp = { wifeLevelOneDialogue[0], wifeLevelOneResponse[0], wifeLevelOneResponse[1] };
+            textWriter.GetComponent<TextWriter>().ShowText(temp);
+        }
+        else
+        {
+            string[] temp = { wifeLevelOneDialogue[1], wifeLevelOneResponse[2], wifeLevelOneResponse[3] };
+            textWriter.GetComponent<TextWriter>().ShowText(temp);
+        }
     }
     public void levelZero()
     {
