@@ -66,6 +66,7 @@ public class WifeScript : MonoBehaviour
     // Wife Tolerance on Arnold
     private int tolerance = 30;
     public GameObject npcManager;
+    public GameObject gameManager;
     Vector3 position = new Vector3();
     private int dialogueNum; // determines which
     public bool interacted = false;
@@ -73,6 +74,9 @@ public class WifeScript : MonoBehaviour
     public InputAction E;
     public GameObject textWriter;
     public GameObject darkenScript;
+    private int choice;
+    private int arnoldEffect;
+    private List<int> wifeEffect;
 
 
     private void Start() {
@@ -85,19 +89,22 @@ public class WifeScript : MonoBehaviour
         if (npcManager.GetComponent<NPCManager>().isInteracting) {
             if (Q.triggered && npcManager.GetComponent<NPCManager>().finishedWritingEffect) {
                 npcManager.GetComponent<NPCManager>().destroyUI();
-                // chose left option
-                Debug.Log("chose left");
                 interacted = true;
                 npcManager.GetComponent<NPCManager>().isInteracting = false;
                 darkenScript.GetComponent<DarkenScript>().Lighten();
+                // Change Arnold Sanity
+                changeArnoldTolerance(arnoldEffect);
+                changeArnoldTolerance(wifeEffect[0]);
             }
             else if (E.triggered && npcManager.GetComponent<NPCManager>().finishedWritingEffect) {
                 npcManager.GetComponent<NPCManager>().destroyUI();
-                // chose right option
                 Debug.Log("chose right");
                 interacted = true;
                 npcManager.GetComponent<NPCManager>().isInteracting = false;
                 darkenScript.GetComponent<DarkenScript>().Lighten();
+                // Change Arnold Sanity
+                changeArnoldTolerance(arnoldEffect);
+                changeArnoldTolerance(wifeEffect[1]);
             }
         }
     }
@@ -155,10 +162,14 @@ public class WifeScript : MonoBehaviour
         if(dialogueNum == 0) {
             string[] temp = {wifeLevelThreeDialogue[0], wifeLevelThreeResponse[0], wifeLevelThreeResponse[1]};
             textWriter.GetComponent<TextWriter>().ShowText(temp);
+            arnoldEffect = wifeLevelThreeDialogueEffect[0];
+            wifeEffect = (wifeLevelThreeEffect[0], wifeLevelThreeEffect[1]);
         }
         else {
             string[] temp = { wifeLevelThreeDialogue[1], wifeLevelThreeResponse[2], wifeLevelThreeResponse[3] };
             textWriter.GetComponent<TextWriter>().ShowText(temp);
+            arnoldEffect = wifeLevelThreeDialogueEffect[1];
+            wifeEffect = (wifeLevelThreeEffect[2], wifeLevelThreeEffect[3]);
         }
     }
     public void levelTwo()
@@ -169,11 +180,15 @@ public class WifeScript : MonoBehaviour
         {
             string[] temp = { wifeLevelTwoDialogue[0], wifeLevelTwoResponse[0], wifeLevelTwoResponse[1] };
             textWriter.GetComponent<TextWriter>().ShowText(temp);
+            arnoldEffect = wifeLevelTwoDialogueEffect[0];
+            wifeEffect = (wifeLevelTwoEffect[0], wifeLevelTwoEffect[1]);
         }
         else
         {
             string[] temp = { wifeLevelTwoDialogue[1], wifeLevelTwoResponse[2], wifeLevelTwoResponse[3] };
             textWriter.GetComponent<TextWriter>().ShowText(temp);
+            arnoldEffect = wifeLevelTwoDialogueEffect[1];
+            wifeEffect = (wifeLevelTwoEffect[2], wifeLevelTwoEffect[3]);
         }
     }
     public void levelOne()
@@ -184,25 +199,31 @@ public class WifeScript : MonoBehaviour
         {
             string[] temp = { wifeLevelOneDialogue[0], wifeLevelOneResponse[0], wifeLevelOneResponse[1] };
             textWriter.GetComponent<TextWriter>().ShowText(temp);
+            arnoldEffect = wifeLevelOneDialogueEffect[0];
+            wifeEffect = (wifeLevelOneEffect[0], wifeLevelOneEffect[1]);
         }
         else
         {
             string[] temp = { wifeLevelOneDialogue[1], wifeLevelOneResponse[2], wifeLevelOneResponse[3] };
             textWriter.GetComponent<TextWriter>().ShowText(temp);
+            arnoldEffect = wifeLevelOneDialogueEffect[1];
+            wifeEffect = (wifeLevelOneEffect[2], wifeLevelOneEffect[3]);
         }
     }
     public void levelZero()
     {
 
     }
-    public void changeWifeTolerance()
-    {
 
+
+    public void changeWifeTolerance(int change)
+    {
+        tolerance -= change;
     }
 
-    public void changeArnoldTolerance()
+    public void changeArnoldTolerance(int change)
     {
-
+        gameManager.GetComponent<GameManager>().currentSanity - change;
     }
     private void OnEnable()
     {
