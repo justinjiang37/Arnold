@@ -28,10 +28,20 @@ public class NPCManager : MonoBehaviour
     }
     public void sleep() {
         Wife.GetComponent<WifeScript>().sleep();
+        Child.GetComponent<ChildScript>().sleep();
+        Boss.GetComponent<BossScript>().sleep();
 
     }
     public bool NPCinteract (GameObject obj) {
         if (obj.name == "Wife" && !Wife.GetComponent<WifeScript>().interacted) {
+            return true;
+        }
+        if (obj.name == "Child" && !Child.GetComponent<ChildScript>().interacted)
+        {
+            return true;
+        }
+        if (obj.name == "Boss" && !Boss.GetComponent<BossScript>().interacted)
+        {
             return true;
         }
         return false;
@@ -63,20 +73,42 @@ public class NPCManager : MonoBehaviour
         {
             Wife.SetActive(false);
         }
+        if (Child.GetComponent<ChildScript>().NPCSceneNum == sceneManager.GetComponent<SceneManager>().currentSceneNum)
+        {
+            Child.SetActive(true);
+        }
+        else
+        {
+            Child.SetActive(false);
+        }
+        if (Boss.GetComponent<BossScript>().NPCSceneNum == sceneManager.GetComponent<SceneManager>().currentSceneNum)
+        {
+            Boss.SetActive(true);
+        }
+        else
+        {
+            Boss.SetActive(false);
+        }
+
     }
     public void changeWifeKidSceneNum() {
         Wife.GetComponent<WifeScript>().changeNPCSceneNum();
+        Child.GetComponent<ChildScript>().changeNPCSceneNum();
     }
     public void changeBossSceneNum()
     {
-
+        Boss.GetComponent<BossScript>().changeNPCSceneNum();
     }
     public void resetPositions()
     {
         Wife.GetComponent<WifeScript>().setPosition();
+        Child.GetComponent<ChildScript>().setPosition();
+        Boss.GetComponent<BossScript>().setPosition();
     }
 
     public void changeInteracted() {
         Wife.GetComponent<WifeScript>().interacted = false;
+        Child.GetComponent<ChildScript>().interacted = false;
+        Boss.GetComponent<BossScript>().interacted = false;
     }
 }

@@ -623,6 +623,7 @@ GameObject:
   - component: {fileID: 845818037}
   - component: {fileID: 845818036}
   - component: {fileID: 845818040}
+  - component: {fileID: 845818039}
   m_Layer: 0
   m_Name: Child
   m_TagString: Untagged
@@ -708,6 +709,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 845818034}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &845818039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845818034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc47d8d8b4075c340a46a3f62da23278, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &845818040
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -737,6 +750,7 @@ GameObject:
   - component: {fileID: 852661287}
   - component: {fileID: 852661286}
   - component: {fileID: 852661290}
+  - component: {fileID: 852661289}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -822,6 +836,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 852661284}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &852661289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852661284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91bc3a7fe595a214abde6c1e4815aefb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &852661290
 Rigidbody:
   m_ObjectHideFlags: 0
