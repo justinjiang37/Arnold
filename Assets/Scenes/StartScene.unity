@@ -159,6 +159,9 @@ MonoBehaviour:
   workToleranceLevel: 0
   sceneManager: {fileID: 432679727}
   daysPassed: 0
+  npcManager: {fileID: 1305612720}
+  slept: 1
+  sleeper: {fileID: 936581923}
 --- !u!114 &16268211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1509,7 +1512,29 @@ MonoBehaviour:
   - It's alright, I'll keep it in check.
   - What do YOU know about him.
   wifeLevelThreeEffect: 0500000009000000040000000c000000
+  wifeLevelTwoDialogue:
+  - There's a new spa that opened up down town. Tifanny and I are going to enjoy
+    our selves today.
+  - You look like you need a hair cut.
+  wifeLevelTwoDialogueEffect: 1700000015000000
+  wifeLevelTwoResponse:
+  - I'm not made of money, you know.
+  - Watch how much you spend.
+  - I hate people touching my hair.
+  - It looks fine to me.
+  wifeLevelTwoEffect: 07000000090000000800000004000000
+  wifeLevelOneDialogue:
+  - Why can't you get a promotion?
+  - I wish you were more like Tiffany's husband.
+  wifeLevelOneDialogueEffect: 1b0000001e000000
+  wifeLevelOneResponse:
+  - SHUT UP!
+  - Stop acting like a bitch.
+  - Why can't YOU act more like Tiffany?
+  - You've changed...
+  wifeLevelOneEffect: 0c0000000f0000000c00000008000000
   npcManager: {fileID: 1305612720}
+  gameManager: {fileID: 16268209}
   interacted: 0
   Q:
     m_Name: Q
@@ -1545,6 +1570,7 @@ MonoBehaviour:
       m_Flags: 0
   textWriter: {fileID: 1185881240}
   darkenScript: {fileID: 1115098654}
+  NPCSceneNum: 1
 --- !u!54 &1159583848
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2031,7 +2057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b4cd864497540e43919adc30d1b3d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 20
   Horizontal:
     m_Name: Horizontal
     m_Type: 0

@@ -30,12 +30,12 @@ public class Interact : MonoBehaviour
                     inRange = false;
                 }
             }
-            else if (obj.name == "Bed")
+            else if (obj.name == "Bed" && !gameManager.GetComponent<GameManager>().slept)
             {
                 interactText.gameObject.SetActive(true);
                 if (Use.triggered)
                 {
-                    gameManager.sleep();
+                    gameManager.GetComponent<GameManager>().sleep();
                     inRange = false;
                 }
             }

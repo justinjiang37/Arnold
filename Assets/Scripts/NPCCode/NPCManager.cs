@@ -26,6 +26,10 @@ public class NPCManager : MonoBehaviour
         chooseQ.SetActive(false);
         NPCDialogue.SetActive(false);
     }
+    public void sleep() {
+        Wife.GetComponent<WifeScript>().sleep();
+
+    }
     public bool NPCinteract (GameObject obj) {
         if (obj.name == "Wife" && !Wife.GetComponent<WifeScript>().interacted) {
             return true;
@@ -50,9 +54,8 @@ public class NPCManager : MonoBehaviour
         }
     }
 
-    public void resetPositions()
-    {
-        if (Wife.GetComponent<WifeScript>().setPosition() == sceneManager.GetComponent<SceneManager>().currentSceneNum)
+    public void showNPC() {
+        if (Wife.GetComponent<WifeScript>().NPCSceneNum == sceneManager.GetComponent<SceneManager>().currentSceneNum)
         {
             Wife.SetActive(true);
         }
@@ -60,6 +63,17 @@ public class NPCManager : MonoBehaviour
         {
             Wife.SetActive(false);
         }
+    }
+    public void changeWifeKidSceneNum() {
+        Wife.GetComponent<WifeScript>().changeNPCSceneNum();
+    }
+    public void changeBossSceneNum()
+    {
+
+    }
+    public void resetPositions()
+    {
+        Wife.GetComponent<WifeScript>().setPosition();
     }
 
     public void changeInteracted() {
