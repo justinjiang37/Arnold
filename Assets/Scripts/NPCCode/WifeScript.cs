@@ -26,7 +26,7 @@ public class WifeScript : MonoBehaviour
         "What do YOU know about him.",
     };
     // Affect on Wife
-    public List<int> wifeLevelThreeEffect = new List<int>(){6, 10, 5, 12};
+    public List<int> wifeLevelThreeEffect = new List<int>(){8, 10, 6, 12};
 
     // LEVEL 2
     public List<string> wifeLevelTwoDialogue = new List<string>()
@@ -43,7 +43,7 @@ public class WifeScript : MonoBehaviour
         "I hate people touching my hair.",
         "It looks fine to me.",
     };
-    public List<int> wifeLevelTwoEffect = new List<int>() { 7, 9, 8, 4 };
+    public List<int> wifeLevelTwoEffect = new List<int>() { 7, 11, 12, 6 };
 
     // LEVEL 1
     public List<string> wifeLevelOneDialogue = new List<string>()
@@ -61,7 +61,7 @@ public class WifeScript : MonoBehaviour
         "Why can't YOU act more like Tiffany?",
         "You've changed...",
     };
-    public List<int> wifeLevelOneEffect = new List<int>() { 12, 15, 12, 8 };
+    public List<int> wifeLevelOneEffect = new List<int>() { 8, 10, 12, 6 };
 
     // Wife Tolerance on Arnold
     private int tolerance = 30;

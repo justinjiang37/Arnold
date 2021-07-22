@@ -11,57 +11,55 @@ public class ChildScript : MonoBehaviour
     // the string is the possible dialogue that the child says when interacted
     public List<string> childLevelThreeDialogue = new List<string>()
     {
-        "Hey honey, Don't flip with Henry alright? We you're income right now for the mortgage. Just learn to put up with him for now.",
-        "Are you sure you want to go to work today? Henry doesn't seem to be putting up with you."
+        "Morning pop, just 5 more minutes.",
+        "Hey Dad, have fun at work."
     };
     // Affect on Arnold
-    public List<int> childLevelThreeDialogueEffect = new List<int>(){18, 20};
+    public List<int> childLevelThreeDialogueEffect = new List<int>(){15, 25};
     // last int of each dict represents the amount that the child's tolerance ON anrold will decrease
     public List<string> childLevelThreeResponse = new List<string>()
     {
-
-        "I'll take care of things on that end, don't worry about it.",
-        "I know moneys tight! You don't need to keep annoying me about it!",
-        "It's alright, I'll keep it in check.",
-        "What do YOU know about him.",
+        "Alright, don't miss the bus again.",
+        "Nope, get out of bed. You are not missing the bus again.",
+        "You dont understand...",
+        "There's nothing fun about that place.",
     };
     // Affect on child
-    public List<int> childLevelThreeEffect = new List<int>(){6, 10, 5, 12};
+    public List<int> childLevelThreeEffect = new List<int>(){6, 12, 8, 10};
 
     // LEVEL 2
     public List<string> childLevelTwoDialogue = new List<string>()
     {
-        "There's a new spa that opened up down town. Tifanny and I are going to enjoy our selves today.",
-        "You look like you need a hair cut."
+        "You know Jared's Dad just bought a Yacht.",
+        "Can I get a new phone, mine has literal buttons as keyboards."
     };
-    public List<int> childLevelTwoDialogueEffect = new List<int>() { 23, 21 };
+    public List<int> childLevelTwoDialogueEffect = new List<int>() { 22, 18 };
     public List<string> childLevelTwoResponse = new List<string>()
     {
 
-        "I'm not made of money, you know.",
-        "Watch how much you spend.",
-        "I hate people touching my hair.",
-        "It looks fine to me.",
+        "You know Jared has straight A's.",
+        "Why don't call him dad then.",
+        "Don't be unthankful.",
+        "I will if you ace your math Quiz.",
     };
-    public List<int> childLevelTwoEffect = new List<int>() { 7, 9, 8, 4 };
+    public List<int> childLevelTwoEffect = new List<int>() { 10, 8, 8, 10 };
 
     // LEVEL 1
     public List<string> childLevelOneDialogue = new List<string>()
     {
-        "Why can't you get a promotion?",
-        "I wish you were more like Tiffany's husband."
+        "Get the fuck away from me.",
+        "Don't you have a career to fail?"
     };
-    public List<int> childLevelOneDialogueEffect = new List<int>() { 27, 30 };
+    public List<int> childLevelOneDialogueEffect = new List<int>() { 15, 25 };
     // last int of each dict represents the amount that the child's tolerance ON anrold will decrease
     public List<string> childLevelOneResponse = new List<string>()
     {
-
-        "SHUT UP!",
-        "Stop acting like a bitch.",
-        "Why can't YOU act more like Tiffany?",
-        "You've changed...",
+        "Language.",
+        "You disrespectful rat!",
+        "Please...don't.",
+        "My career is not of your concern!",
     };
-    public List<int> childLevelOneEffect = new List<int>() { 12, 15, 12, 8 };
+    public List<int> childLevelOneEffect = new List<int>() { 8, 10, 6, 12};
 
     // child Tolerance on Arnold
     private int tolerance = 30;
@@ -82,6 +80,7 @@ public class ChildScript : MonoBehaviour
 
     private void Start() {
         this.gameObject.SetActive(false);
+        Debug.Log(childLevelOneDialogue[0]);
     }
 
     private void Update() {
@@ -116,6 +115,7 @@ public class ChildScript : MonoBehaviour
     }
     public void showDialogue()
     {
+        Debug.Log("hi");
         if (tolerance >= 20)
         {
             levelThree();
@@ -178,12 +178,14 @@ public class ChildScript : MonoBehaviour
         // call text Writer
         if(dialogueNum == 0) {
             string[] temp = {childLevelThreeDialogue[0], childLevelThreeResponse[0], childLevelThreeResponse[1]};
+            Debug.Log(temp[0]);
             textWriter.GetComponent<TextWriter>().ShowText(temp);
             arnoldEffect = childLevelThreeDialogueEffect[0];
             childEffect = new List<int> { childLevelThreeEffect[0], childLevelThreeEffect[1]};
         }
         else {
             string[] temp = { childLevelThreeDialogue[1], childLevelThreeResponse[2], childLevelThreeResponse[3] };
+            Debug.Log(temp[0]);
             textWriter.GetComponent<TextWriter>().ShowText(temp);
             arnoldEffect = childLevelThreeDialogueEffect[1];
             childEffect = new List<int> { childLevelThreeEffect[2], childLevelThreeEffect[3]};
