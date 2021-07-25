@@ -59,7 +59,7 @@ public class ChildScript : MonoBehaviour
         "Please...don't.",
         "My career is not of your concern!",
     };
-    public List<int> childLevelOneEffect = new List<int>() { 8, 10, 6, 12};
+    public List<int> childLevelOneEffect = new List<int>() { 8, 10, 6, 12 };
 
     // child Tolerance on Arnold
     private int tolerance = 30;
@@ -72,6 +72,7 @@ public class ChildScript : MonoBehaviour
     public InputAction E;
     public GameObject textWriter;
     public GameObject darkenScript;
+    public GameObject player;
     private int choice;
     private int arnoldEffect;
     private List<int> childEffect;
@@ -80,7 +81,7 @@ public class ChildScript : MonoBehaviour
 
     private void Start() {
         this.gameObject.SetActive(false);
-        Debug.Log(childLevelOneDialogue[0]);
+        Debug.Log(childLevelThreeDialogue[0]);
     }
 
     private void Update() {
@@ -89,6 +90,7 @@ public class ChildScript : MonoBehaviour
         if (npcManager.GetComponent<NPCManager>().isInteracting) {
             if (Q.triggered && npcManager.GetComponent<NPCManager>().finishedWritingEffect) {
                 npcManager.GetComponent<NPCManager>().destroyUI();
+                player.GetComponent<PlayerControl>().UnFreezePosition();
                 interacted = true;
                 npcManager.GetComponent<NPCManager>().isInteracting = false;
                 darkenScript.GetComponent<DarkenScript>().Lighten();
@@ -98,6 +100,7 @@ public class ChildScript : MonoBehaviour
             }
             else if (E.triggered && npcManager.GetComponent<NPCManager>().finishedWritingEffect) {
                 npcManager.GetComponent<NPCManager>().destroyUI();
+                player.GetComponent<PlayerControl>().UnFreezePosition();
                 Debug.Log("chose right");
                 interacted = true;
                 npcManager.GetComponent<NPCManager>().isInteracting = false;
@@ -140,7 +143,7 @@ public class ChildScript : MonoBehaviour
         }
         else if (tolerance >= 10 && tolerance < 20)
         {
-            NPCSceneNum = 2;
+            NPCSceneNum = 4;
         }
         else if (tolerance > 0 && tolerance < 10)
         {

@@ -11,7 +11,7 @@ public class WifeScript : MonoBehaviour
     // the string is the possible dialogue that the wife says when interacted
     public List<string> wifeLevelThreeDialogue = new List<string>()
     {
-        "Hey honey, Don't flip with Henry alright? We you're income right now for the mortgage. Just learn to put up with him for now.",
+        "Hey honey, Don't flip with Henry alright? We you're income right now for the mortgage. Just learn to put up with him for now. Yes I am asfdjaslkj",
         "Are you sure you want to go to work today? Henry doesn't seem to be putting up with you."
     };
     // Affect on Arnold
@@ -19,7 +19,6 @@ public class WifeScript : MonoBehaviour
     // last int of each dict represents the amount that the wife's tolerance ON anrold will decrease
     public List<string> wifeLevelThreeResponse = new List<string>()
     {
-
         "I'll take care of things on that end, don't worry about it.",
         "I know moneys tight! You don't need to keep annoying me about it!",
         "It's alright, I'll keep it in check.",
@@ -55,7 +54,6 @@ public class WifeScript : MonoBehaviour
     // last int of each dict represents the amount that the wife's tolerance ON anrold will decrease
     public List<string> wifeLevelOneResponse = new List<string>()
     {
-
         "SHUT UP!",
         "Stop acting like a bitch.",
         "Why can't YOU act more like Tiffany?",
@@ -74,6 +72,7 @@ public class WifeScript : MonoBehaviour
     public InputAction E;
     public GameObject textWriter;
     public GameObject darkenScript;
+    public GameObject player;
     private int choice;
     private int arnoldEffect;
     private List<int> wifeEffect;
@@ -90,6 +89,7 @@ public class WifeScript : MonoBehaviour
         if (npcManager.GetComponent<NPCManager>().isInteracting) {
             if (Q.triggered && npcManager.GetComponent<NPCManager>().finishedWritingEffect) {
                 npcManager.GetComponent<NPCManager>().destroyUI();
+                player.GetComponent<PlayerControl>().UnFreezePosition();
                 interacted = true;
                 npcManager.GetComponent<NPCManager>().isInteracting = false;
                 darkenScript.GetComponent<DarkenScript>().Lighten();
@@ -99,6 +99,7 @@ public class WifeScript : MonoBehaviour
             }
             else if (E.triggered && npcManager.GetComponent<NPCManager>().finishedWritingEffect) {
                 npcManager.GetComponent<NPCManager>().destroyUI();
+                player.GetComponent<PlayerControl>().UnFreezePosition();
                 Debug.Log("chose right");
                 interacted = true;
                 npcManager.GetComponent<NPCManager>().isInteracting = false;
@@ -140,11 +141,11 @@ public class WifeScript : MonoBehaviour
         }
         else if (tolerance >= 10 && tolerance < 20)
         {
-            NPCSceneNum = 2;
+            NPCSceneNum = 4;
         }
         else if (tolerance > 0 && tolerance < 10)
         {
-            NPCSceneNum = 4;
+            NPCSceneNum = 1;
         }
         else
         {

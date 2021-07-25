@@ -14,12 +14,14 @@ public class TextWriter : MonoBehaviour
     public GameObject NPCDialogue;
     public GameObject NPCManager;
     public GameObject darkenScript;
+    public GameObject player;
 
     public void ShowText(string[] dialogue) {
         StartCoroutine(WritingEffect(dialogue));
     }
     IEnumerator WritingEffect(string[] dialogue)
     {
+        player.GetComponent<PlayerControl>().FreezePosition();
         darkenScript.GetComponent<DarkenScript>().Darken();
         yield return new WaitForSeconds(1.5f);
         NPCManager.GetComponent<NPCManager>().finishedWritingEffect = false;

@@ -622,8 +622,8 @@ GameObject:
   - component: {fileID: 845818038}
   - component: {fileID: 845818037}
   - component: {fileID: 845818036}
-  - component: {fileID: 845818040}
   - component: {fileID: 845818039}
+  - component: {fileID: 845818040}
   - component: {fileID: 845818041}
   m_Layer: 0
   m_Name: Child
@@ -723,38 +723,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   childLevelThreeDialogue:
-  - Hey honey, Don't flip with Henry alright? We you're income right now for the
-    mortgage. Just learn to put up with him for now.
-  - Are you sure you want to go to work today? Henry doesn't seem to be putting up
-    with you.
-  childLevelThreeDialogueEffect: 1200000014000000
+  - Morning pop, just 5 more minutes.
+  - Hey Dad, have fun at work.
+  childLevelThreeDialogueEffect: 0f00000019000000
   childLevelThreeResponse:
-  - I'll take care of things on that end, don't worry about it.
-  - I know moneys tight! You don't need to keep annoying me about it!
-  - It's alright, I'll keep it in check.
-  - What do YOU know about him.
-  childLevelThreeEffect: 060000000a000000050000000c000000
+  - Alright, don't miss the bus again.
+  - Nope, get out of bed. You are not missing the bus again.
+  - You dont understand...
+  - There's nothing fun about that place.
+  childLevelThreeEffect: 060000000c000000080000000a000000
   childLevelTwoDialogue:
-  - There's a new spa that opened up down town. Tifanny and I are going to enjoy
-    our selves today.
-  - You look like you need a hair cut.
-  childLevelTwoDialogueEffect: 1700000015000000
+  - You know Jared's Dad just bought a Yacht.
+  - Can I get a new phone, mine has literal buttons as keyboards.
+  childLevelTwoDialogueEffect: 1600000012000000
   childLevelTwoResponse:
-  - I'm not made of money, you know.
-  - Watch how much you spend.
-  - I hate people touching my hair.
-  - It looks fine to me.
-  childLevelTwoEffect: 07000000090000000800000004000000
+  - You know Jared has straight A's.
+  - Why don't call him dad then.
+  - Don't be unthankful.
+  - I will if you ace your math Quiz.
+  childLevelTwoEffect: 0a00000008000000080000000a000000
   childLevelOneDialogue:
-  - Why can't you get a promotion?
-  - I wish you were more like Tiffany's husband.
-  childLevelOneDialogueEffect: 1b0000001e000000
+  - Get the fuck away from me.
+  - Don't you have a career to fail?
+  childLevelOneDialogueEffect: 0f00000019000000
   childLevelOneResponse:
-  - SHUT UP!
-  - Stop acting like a bitch.
-  - Why can't YOU act more like Tiffany?
-  - You've changed...
-  childLevelOneEffect: 0c0000000f0000000c00000008000000
+  - Language.
+  - You disrespectful rat!
+  - Please...don't.
+  - My career is not of your concern!
+  childLevelOneEffect: 080000000a000000060000000c000000
   npcManager: {fileID: 1305612720}
   gameManager: {fileID: 16268209}
   interacted: 0
@@ -765,7 +762,15 @@ MonoBehaviour:
     m_Id: 5e506707-2766-4fe7-9fd5-c15ace39a7d2
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 10c968e5-ac28-402c-a24a-70c27a0d4394
+      m_Path: <Keyboard>/q
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Q
+      m_Flags: 0
   E:
     m_Name: E
     m_Type: 0
@@ -773,7 +778,15 @@ MonoBehaviour:
     m_Id: c56a2ef8-c8a2-490f-a913-2d98bfc629a1
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 592919bf-b0d9-4ec8-abd8-0c85a8da2868
+      m_Path: <Keyboard>/e
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: E
+      m_Flags: 0
   textWriter: {fileID: 1185881240}
   darkenScript: {fileID: 1115098654}
   NPCSceneNum: 2
@@ -827,8 +840,8 @@ GameObject:
   - component: {fileID: 852661288}
   - component: {fileID: 852661287}
   - component: {fileID: 852661286}
-  - component: {fileID: 852661290}
   - component: {fileID: 852661289}
+  - component: {fileID: 852661290}
   - component: {fileID: 852661291}
   m_Layer: 0
   m_Name: Boss
@@ -924,42 +937,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 852661284}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91bc3a7fe595a214abde6c1e4815aefb, type: 3}
+  m_Script: {fileID: 11500000, guid: 741c48d444903fa47921d527c5ff5049, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bossLevelThreeDialogue:
-  - Hey honey, Don't flip with Henry alright? We you're income right now for the
-    mortgage. Just learn to put up with him for now.
-  - Are you sure you want to go to work today? Henry doesn't seem to be putting up
-    with you.
-  bossLevelThreeDialogueEffect: 1200000014000000
+  - asdfasdfasdf
+  - Hey Dad, have fun at work.
+  bossLevelThreeDialogueEffect: 0f00000019000000
   bossLevelThreeResponse:
-  - I'll take care of things on that end, don't worry about it.
-  - I know moneys tight! You don't need to keep annoying me about it!
-  - It's alright, I'll keep it in check.
-  - What do YOU know about him.
-  bossLevelThreeEffect: 060000000a000000050000000c000000
+  - Alright, don't miss the bus again.
+  - Nope, get out of bed. You are not missing the bus again.
+  - You dont understand...
+  - There's nothing fun about that place.
+  bossLevelThreeEffect: 060000000c000000080000000a000000
   bossLevelTwoDialogue:
-  - There's a new spa that opened up down town. Tifanny and I are going to enjoy
-    our selves today.
-  - You look like you need a hair cut.
-  bossLevelTwoDialogueEffect: 1700000015000000
+  - You know Jared's Dad just bought a Yacht.
+  - Can I get a new phone, mine has literal buttons as keyboards.
+  bossLevelTwoDialogueEffect: 1600000012000000
   bossLevelTwoResponse:
-  - I'm not made of money, you know.
-  - Watch how much you spend.
-  - I hate people touching my hair.
-  - It looks fine to me.
-  bossLevelTwoEffect: 07000000090000000800000004000000
+  - You know Jared has straight A's.
+  - Why don't call him dad then.
+  - Don't be unthankful.
+  - I will if you ace your math Quiz.
+  bossLevelTwoEffect: 0a00000008000000080000000a000000
   bossLevelOneDialogue:
-  - Why can't you get a promotion?
-  - I wish you were more like Tiffany's husband.
-  bossLevelOneDialogueEffect: 1b0000001e000000
+  - Get the fuck away from me.
+  - Don't you have a career to fail?
+  bossLevelOneDialogueEffect: 0f00000019000000
   bossLevelOneResponse:
-  - SHUT UP!
-  - Stop acting like a bitch.
-  - Why can't YOU act more like Tiffany?
-  - You've changed...
-  bossLevelOneEffect: 0c0000000f0000000c00000008000000
+  - Language.
+  - You disrespectful rat!
+  - Please...don't.
+  - My career is not of your concern!
+  bossLevelOneEffect: 080000000a000000060000000c000000
   npcManager: {fileID: 1305612720}
   gameManager: {fileID: 16268209}
   interacted: 0
@@ -967,18 +977,34 @@ MonoBehaviour:
     m_Name: Q
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: d6a226e5-78bb-4888-91ce-91fa10b6b5ca
+    m_Id: ad03148c-b8cc-4347-8c6a-4ca0fb571e33
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 0a6bd426-958a-42ba-9340-c3b626a424a4
+      m_Path: <Keyboard>/q
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Q
+      m_Flags: 0
   E:
     m_Name: E
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 570f1aed-1acd-49b0-a52c-0a34179128e2
+    m_Id: a2036852-87a1-4355-8cd3-561a7437c41b
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: e45f4109-bf18-4a93-a1c5-91dbf97b64b9
+      m_Path: <Keyboard>/e
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: E
+      m_Flags: 0
   textWriter: {fileID: 1185881240}
   darkenScript: {fileID: 1115098654}
   NPCSceneNum: 5
@@ -996,7 +1022,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &852661291
 MonoBehaviour:
@@ -1752,6 +1778,7 @@ MonoBehaviour:
       m_Flags: 0
   textWriter: {fileID: 1185881240}
   darkenScript: {fileID: 1115098654}
+  player: {fileID: 1508733263}
   NPCSceneNum: 1
 --- !u!54 &1159583848
 Rigidbody:
@@ -1841,6 +1868,7 @@ MonoBehaviour:
   NPCDialogue: {fileID: 1737552570}
   NPCManager: {fileID: 1305612720}
   darkenScript: {fileID: 1115098654}
+  player: {fileID: 1508733263}
 --- !u!1 &1200222603
 GameObject:
   m_ObjectHideFlags: 0
