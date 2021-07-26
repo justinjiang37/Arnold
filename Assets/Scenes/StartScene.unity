@@ -789,6 +789,7 @@ MonoBehaviour:
       m_Flags: 0
   textWriter: {fileID: 1185881240}
   darkenScript: {fileID: 1115098654}
+  player: {fileID: 1508733263}
   NPCSceneNum: 2
 --- !u!54 &845818040
 Rigidbody:
@@ -941,35 +942,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossLevelThreeDialogue:
-  - asdfasdfasdf
-  - Hey Dad, have fun at work.
-  bossLevelThreeDialogueEffect: 0f00000019000000
+  - It is 10 past 9, please start crunching the numbers for Jerry's Law Firm immediately.
+  - I understand your family is important, but Jerry's Law Firms needs those numbers
+    by the end of the day.
+  bossLevelThreeDialogueEffect: 1600000012000000
   bossLevelThreeResponse:
-  - Alright, don't miss the bus again.
-  - Nope, get out of bed. You are not missing the bus again.
-  - You dont understand...
-  - There's nothing fun about that place.
-  bossLevelThreeEffect: 060000000c000000080000000a000000
+  - Sorry, I will make sure to get here on time tommorow.
+  - There was traffic, ok?
+  - My family is none of your concern.
+  - Sorry, I will make sure to get here on time tommorow.
+  bossLevelThreeEffect: 060000000c0000000c00000006000000
   bossLevelTwoDialogue:
-  - You know Jared's Dad just bought a Yacht.
-  - Can I get a new phone, mine has literal buttons as keyboards.
-  bossLevelTwoDialogueEffect: 1600000012000000
+  - The Law Firm Called, the numbers are incorrect.
+  - Please redo the numbers, the Law Firm called and tehy insisted it was incorrect.
+  bossLevelTwoDialogueEffect: 1700000011000000
   bossLevelTwoResponse:
-  - You know Jared has straight A's.
-  - Why don't call him dad then.
-  - Don't be unthankful.
-  - I will if you ace your math Quiz.
-  bossLevelTwoEffect: 0a00000008000000080000000a000000
+  - What? ok I will try again.
+  - I'll get to it later.
+  - I'll try.
+  - I triple checked them. I'm sure they are not wrong.
+  bossLevelTwoEffect: 070000000b000000050000000d000000
   bossLevelOneDialogue:
-  - Get the fuck away from me.
-  - Don't you have a career to fail?
-  bossLevelOneDialogueEffect: 0f00000019000000
+  - We lost Jerry's Law Firm. You moron.
+  - Heard Jerry's is already looking for a new Accounting Co. Nice job dumbass.
+  bossLevelOneDialogueEffect: 1e0000001e000000
   bossLevelOneResponse:
-  - Language.
-  - You disrespectful rat!
-  - Please...don't.
-  - My career is not of your concern!
-  bossLevelOneEffect: 080000000a000000060000000c000000
+  - I'm sorry...
+  - Fuck you.
+  - Well, Jerry's loss.
+  - Fuck you.
+  bossLevelOneEffect: 060000000c000000060000000c000000
   npcManager: {fileID: 1305612720}
   gameManager: {fileID: 16268209}
   interacted: 0
@@ -1007,6 +1009,7 @@ MonoBehaviour:
       m_Flags: 0
   textWriter: {fileID: 1185881240}
   darkenScript: {fileID: 1115098654}
+  player: {fileID: 1508733263}
   NPCSceneNum: 5
 --- !u!54 &852661290
 Rigidbody:

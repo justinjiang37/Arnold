@@ -11,55 +11,54 @@ public class BossScript : MonoBehaviour
     // the string is the possible dialogue that the boss says when interacted
     public List<string> bossLevelThreeDialogue = new List<string>()
     {
-        "asdfasdfasdf",
-        "Hey Dad, have fun at work."
+        "It is 10 past 9, please start crunching the numbers for Jerry's Law Firm immediately.",
+        "I understand your family is important, but Jerry's Law Firms needs those numbers by the end of the day."
     };
     // Affect on Arnold
-    public List<int> bossLevelThreeDialogueEffect = new List<int>() { 15, 25 };
-    // last int of each dict represents the amount that the boss's tolerance ON anrold will decrease
+    public List<int> bossLevelThreeDialogueEffect = new List<int>() { 22, 18 };
+
     public List<string> bossLevelThreeResponse = new List<string>()
     {
-        "Alright, don't miss the bus again.",
-        "Nope, get out of bed. You are not missing the bus again.",
-        "You dont understand...",
-        "There's nothing fun about that place.",
+        "Sorry, I will make sure to get here on time tommorow.",
+        "There was traffic, ok?",
+        "My family is none of your concern.",
+        "Sorry, I will make sure to get here on time tommorow.",
     };
     // Affect on boss
-    public List<int> bossLevelThreeEffect = new List<int>() { 6, 12, 8, 10 };
+    public List<int> bossLevelThreeEffect = new List<int>() { 6, 12, 12, 6 };
 
     // LEVEL 2
     public List<string> bossLevelTwoDialogue = new List<string>()
     {
-        "You know Jared's Dad just bought a Yacht.",
-        "Can I get a new phone, mine has literal buttons as keyboards."
+        "The Law Firm Called, the numbers are incorrect.",
+        "Please redo the numbers, the Law Firm called and tehy insisted it was incorrect."
     };
-    public List<int> bossLevelTwoDialogueEffect = new List<int>() { 22, 18 };
+    public List<int> bossLevelTwoDialogueEffect = new List<int>() { 23, 17 };
     public List<string> bossLevelTwoResponse = new List<string>()
     {
 
-        "You know Jared has straight A's.",
-        "Why don't call him dad then.",
-        "Don't be unthankful.",
-        "I will if you ace your math Quiz.",
+        "What? ok I will try again.",
+        "I'll get to it later.",
+        "I'll try.",
+        "I triple checked them. I'm sure they are not wrong.",
     };
-    public List<int> bossLevelTwoEffect = new List<int>() { 10, 8, 8, 10 };
+    public List<int> bossLevelTwoEffect = new List<int>() { 7, 11, 5, 13 };
 
     // LEVEL 1
     public List<string> bossLevelOneDialogue = new List<string>()
     {
-        "Get the fuck away from me.",
-        "Don't you have a career to fail?"
+        "We lost Jerry's Law Firm. You moron.",
+        "Heard Jerry's is already looking for a new Accounting Co. Nice job dumbass."
     };
-    public List<int> bossLevelOneDialogueEffect = new List<int>() { 15, 25 };
-    // last int of each dict represents the amount that the boss's tolerance ON anrold will decrease
+    public List<int> bossLevelOneDialogueEffect = new List<int>() { 30, 30 };
     public List<string> bossLevelOneResponse = new List<string>()
     {
-        "Language.",
-        "You disrespectful rat!",
-        "Please...don't.",
-        "My career is not of your concern!",
+        "I'm sorry...",
+        "Fuck you.",
+        "Well, Jerry's loss.",
+        "Fuck you.",
     };
-    public List<int> bossLevelOneEffect = new List<int>() { 8, 10, 6, 12 };
+    public List<int> bossLevelOneEffect = new List<int>() { 6, 12, 6, 12 };
 
     // boss Tolerance on Arnold
     private int tolerance = 30;
@@ -82,6 +81,7 @@ public class BossScript : MonoBehaviour
     private void Start()
     {
         this.gameObject.SetActive(false);
+        Debug.Log(bossLevelThreeDialogue[0]);
     }
 
     private void Update()

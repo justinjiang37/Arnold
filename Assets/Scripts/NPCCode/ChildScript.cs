@@ -81,7 +81,6 @@ public class ChildScript : MonoBehaviour
 
     private void Start() {
         this.gameObject.SetActive(false);
-        Debug.Log(childLevelThreeDialogue[0]);
     }
 
     private void Update() {

@@ -41,7 +41,9 @@ public class Interact : MonoBehaviour
             }
             else if (NPCManager.GetComponent<NPCManager>().NPCinteract(obj))
             {
-                interactText.gameObject.SetActive(true);
+                if (!NPCManager.GetComponent<NPCManager>().interacted(obj)) {
+                    interactText.gameObject.SetActive(true);
+                }
                 // implement method to only allow to interact once
                 if (Use.triggered)
                 {
