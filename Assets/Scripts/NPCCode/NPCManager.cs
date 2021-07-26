@@ -32,20 +32,6 @@ public class NPCManager : MonoBehaviour
         Boss.GetComponent<BossScript>().sleep();
 
     }
-    public bool interacted(GameObject obj) {
-        if (obj.name == "Wife")
-        {
-            return Wife.GetComponent<WifeScript>().interacted;
-        }
-        else if (obj.name == "Child")
-        {
-            return Child.GetComponent<ChildScript>().interacted;
-        }
-        else
-        {
-            return Boss.GetComponent<BossScript>().interacted;
-        }
-    }
     public bool NPCinteract (GameObject obj) {
         if (obj.name == "Wife" && !Wife.GetComponent<WifeScript>().interacted) {
             return true;
