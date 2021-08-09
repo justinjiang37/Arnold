@@ -302,6 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddba068d9a765f344a1ab6fb916618f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentSceneNum: 0
   nextSceneNum: 1
   position: {x: 17, y: 1, z: 10}
   UIText: Bedroom
@@ -309,6 +310,8 @@ MonoBehaviour:
   player: {fileID: 0}
   sceneManage: {fileID: 0}
   gameManager: {fileID: 0}
+  npcManager: {fileID: 0}
+  transition: {fileID: 0}
 --- !u!65 &605989061
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -418,6 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddba068d9a765f344a1ab6fb916618f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentSceneNum: 0
   nextSceneNum: 3
   position: {x: -7, y: 1, z: -7}
   UIText: Bathroom
@@ -425,6 +429,8 @@ MonoBehaviour:
   player: {fileID: 0}
   sceneManage: {fileID: 0}
   gameManager: {fileID: 0}
+  npcManager: {fileID: 0}
+  transition: {fileID: 0}
 --- !u!65 &809640007
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -630,6 +636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddba068d9a765f344a1ab6fb916618f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentSceneNum: 0
   nextSceneNum: 2
   position: {x: 4, y: 1, z: -12}
   UIText: Kidsroom
@@ -637,6 +644,8 @@ MonoBehaviour:
   player: {fileID: 0}
   sceneManage: {fileID: 0}
   gameManager: {fileID: 0}
+  npcManager: {fileID: 0}
+  transition: {fileID: 0}
 --- !u!65 &1147622355
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1031,6 +1040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddba068d9a765f344a1ab6fb916618f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentSceneNum: 0
   nextSceneNum: 5
   position: {x: -45.5, y: 1, z: 0}
   UIText: Work
@@ -1038,6 +1048,8 @@ MonoBehaviour:
   player: {fileID: 0}
   sceneManage: {fileID: 0}
   gameManager: {fileID: 0}
+  npcManager: {fileID: 0}
+  transition: {fileID: 0}
 --- !u!65 &1346980620
 BoxCollider:
   m_ObjectHideFlags: 0

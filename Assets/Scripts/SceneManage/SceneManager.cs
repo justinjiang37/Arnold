@@ -31,6 +31,7 @@ public class SceneManager : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneNum);
         if (nextSceneNum == 5) {
             // load sleep animation for NPC
+            npcManager.GetComponent<NPCManager>().resetPositionsWork();
             npcManager.GetComponent<NPCManager>().sleep();
             gameManager.GetComponent<GameManager>().slept = false;
         }
@@ -55,7 +56,8 @@ public class SceneManager : MonoBehaviour
         currentSceneNum = nextSceneNum;
         UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneNum);
         npcManager.GetComponent<NPCManager>().changeWifeKidSceneNum();
-        npcManager.GetComponent<NPCManager>().resetPositions();
+        npcManager.GetComponent<NPCManager>().resetPositionsFamily();
+        npcManager.GetComponent<NPCManager>().resetPositionsWork();
         npcManager.GetComponent<NPCManager>().showNPC();
 
         transition.SetTrigger("End");

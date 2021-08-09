@@ -21,7 +21,7 @@ public class ChildScript : MonoBehaviour
     {
         "Alright, don't miss the bus again.",
         "Nope, get out of bed. You are not missing the bus again.",
-        "You dont understand...",
+        "Yeah, I'll try...",
         "There's nothing fun about that place.",
     };
     // Affect on child
@@ -112,7 +112,7 @@ public class ChildScript : MonoBehaviour
     }
     public void sleep() {
         NPCSceneNum = 2;
-        position = new Vector3(4, 1, 10);
+        position = new Vector3(2, 3, 11);
         this.gameObject.transform.position = position;
     }
     public void showDialogue()
@@ -146,7 +146,7 @@ public class ChildScript : MonoBehaviour
         }
         else if (tolerance > 0 && tolerance < 10)
         {
-            NPCSceneNum = 4;
+            NPCSceneNum = 3;
         }
         else
         {
@@ -157,19 +157,19 @@ public class ChildScript : MonoBehaviour
     {
         if (tolerance >= 20)
         {
-            position = new Vector3(0, 1, 0);
+            position = new Vector3(2, 3, 11);
             this.gameObject.transform.position = position;
 
         }
         else if (tolerance >= 10 && tolerance < 20)
         {
-            position = new Vector3(0, 1, 0);
+            position = new Vector3(2.5f, 1, 17);
             this.gameObject.transform.position = position;
 
         }
         else if (tolerance > 0 && tolerance < 10)
         {
-            position = new Vector3(1, 1, 1);
+            position = new Vector3(3, 1, -3.85f);
             this.gameObject.transform.position = position;
         }
 

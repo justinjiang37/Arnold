@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1);
         npcManager.GetComponent<NPCManager>().changeBossSceneNum();
         npcManager.GetComponent<NPCManager>().changeWifeKidSceneNum();
-        npcManager.GetComponent<NPCManager>().resetPositions();
+        npcManager.GetComponent<NPCManager>().resetPositionsFamily();
         npcManager.GetComponent<NPCManager>().changeInteracted();
         npcManager.GetComponent<NPCManager>().showNPC();
 

@@ -115,12 +115,6 @@ public class BossScript : MonoBehaviour
             }
         }
     }
-    public void sleep()
-    {
-        NPCSceneNum = 2;
-        position = new Vector3(4, 1, 10);
-        this.gameObject.transform.position = position;
-    }
     public void showDialogue()
     {
         if (tolerance >= 20)
@@ -163,19 +157,19 @@ public class BossScript : MonoBehaviour
     {
         if (tolerance >= 20)
         {
-            position = new Vector3(0, 1, 0);
+            position = new Vector3(40, 1, 33);
             this.gameObject.transform.position = position;
 
         }
         else if (tolerance >= 10 && tolerance < 20)
         {
-            position = new Vector3(0, 1, 0);
+            position = new Vector3(-26, 1, 13);
             this.gameObject.transform.position = position;
 
         }
         else if (tolerance > 0 && tolerance < 10)
         {
-            position = new Vector3(1, 1, 1);
+            position = new Vector3(40, 1, 33);
             this.gameObject.transform.position = position;
         }
 

@@ -29,8 +29,6 @@ public class NPCManager : MonoBehaviour
     public void sleep() {
         Wife.GetComponent<WifeScript>().sleep();
         Child.GetComponent<ChildScript>().sleep();
-        Boss.GetComponent<BossScript>().sleep();
-
     }
     public bool NPCinteract (GameObject obj) {
         if (obj.name == "Wife" && !Wife.GetComponent<WifeScript>().interacted) {
@@ -99,11 +97,13 @@ public class NPCManager : MonoBehaviour
     {
         Boss.GetComponent<BossScript>().changeNPCSceneNum();
     }
-    public void resetPositions()
+    public void resetPositionsWork() {
+        Boss.GetComponent<BossScript>().setPosition();
+    }
+    public void resetPositionsFamily()
     {
         Wife.GetComponent<WifeScript>().setPosition();
         Child.GetComponent<ChildScript>().setPosition();
-        Boss.GetComponent<BossScript>().setPosition();
     }
 
     public void changeInteracted() {

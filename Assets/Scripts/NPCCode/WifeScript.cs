@@ -162,13 +162,13 @@ public class WifeScript : MonoBehaviour
         }
         else if (tolerance >= 10 && tolerance < 20)
         {
-            position = new Vector3(0, 1, 0);
+            position = new Vector3(21.5f, 1, 5);
             this.gameObject.transform.position = position;
 
         }
         else if (tolerance > 0 && tolerance < 10)
         {
-            position = new Vector3(1, 1, 1);
+            position = new Vector3(4, 5, 10);
             this.gameObject.transform.position = position;
         }
 
