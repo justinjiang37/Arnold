@@ -23,7 +23,14 @@ public class PlayerControl : MonoBehaviour {
 
         rb.AddForce(finalVector * speed);
     }
-
+    public void FreezePosition () {
+        rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+    }
+    public void UnFreezePosition()
+    {
+        rb.constraints = RigidbodyConstraints.None;
+        rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+    }
     private void OnEnable()
     {
         Horizontal.Enable();

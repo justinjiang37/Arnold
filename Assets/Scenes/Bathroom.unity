@@ -876,6 +876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddba068d9a765f344a1ab6fb916618f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentSceneNum: 0
   nextSceneNum: 4
   position: {x: 5, y: 1, z: 5}
   UIText: Living Room
@@ -883,6 +884,8 @@ MonoBehaviour:
   player: {fileID: 0}
   sceneManage: {fileID: 0}
   gameManager: {fileID: 0}
+  npcManager: {fileID: 0}
+  transition: {fileID: 0}
 --- !u!65 &1752928050
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
     public GameObject startButton;
     public GameObject sceneManager;
     public void PlayGame () {
-        sceneManager.GetComponent<SceneManager>().loadScene(1, new Vector3(0,1,0));
+        sceneManager.GetComponent<SceneManager>().loadStartScene(1, new Vector3(0,1,0));
         title.SetActive(false);
         startButton.SetActive(false);
     }

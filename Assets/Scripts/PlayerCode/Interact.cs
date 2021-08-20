@@ -7,6 +7,7 @@ public class Interact : MonoBehaviour
 {
     public SceneManager sceneManager;
     public GameManager gameManager;
+    public GameObject NPCManager;
     private GameObject obj;
     public InputAction Use;
     public Text interactText;
@@ -20,28 +21,36 @@ public class Interact : MonoBehaviour
     {
         if (inRange)
         {
-            interactText.text = obj.GetComponent<SceneManager>().UIText;
-            interactText.gameObject.SetActive(true);
+            Debug.Log(NPCManager.GetComponent<NPCManager>().NPCinteract(obj));
             if (obj.name == "SceneSwitchDoor")
             {
+                interactText.text = obj.GetComponent<SceneManager>().UIText;
+                interactText.gameObject.SetActive(true);
                 if (Use.triggered) {
                     sceneManager.loadScene(obj.GetComponent<SceneManager>().nextSceneNum, obj.GetComponent<SceneManager>().position);
                     inRange = false;
                 }
             }
-            else if (obj.name == "Bed")
+            else if (obj.name == "Bed" && !gameManager.GetComponent<GameManager>().slept)
             {
+                interactText.text = obj.GetComponent<SceneManager>().UIText;
+                interactText.gameObject.SetActive(true);
                 if (Use.triggered)
                 {
-                    gameManager.sleep();
+                    gameManager.GetComponent<GameManager>().sleep();
                     inRange = false;
                 }
             }
-            else
+
+            else if (NPCManager.GetComponent<NPCManager>().NPCinteract(obj))
             {
+                interactText.text = obj.GetComponent<SceneManager>().UIText;
+                interactText.gameObject.SetActive(true);
+                // implement method to only allow to interact once
                 if (Use.triggered)
                 {
-                    obj.SetActive(false);
+                    NPCManager.GetComponent<NPCManager>().displayDialogue(obj.name);
+                    inRange = false;
                 }
             }
         }
