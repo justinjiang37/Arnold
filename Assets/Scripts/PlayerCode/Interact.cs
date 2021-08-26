@@ -21,7 +21,6 @@ public class Interact : MonoBehaviour
     {
         if (inRange)
         {
-            Debug.Log(NPCManager.GetComponent<NPCManager>().NPCinteract(obj));
             if (obj.name == "SceneSwitchDoor")
             {
                 interactText.text = obj.GetComponent<SceneManager>().UIText;
