@@ -10,6 +10,10 @@ public class GameManager : MonoBehaviour
     // Sanity Instances
     public float currentSanity = 99.0f;
     public float maxSanity = 100.0f;
+    public int overallSituation = 0;
+    public int volume = 5;
+    // overall sit determines the enviorment changes and what the mood feels like
+
     // Arnold's Tolerance on others
     public int familyToleranceLevel = 0;
     public int workToleranceLevel = 0;
@@ -21,6 +25,9 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
+    }
+    void Update() {
+        overallSituation = (familyToleranceLevel + workToleranceLevel)/2;
     }
     public void sleep() {
         slept = true;

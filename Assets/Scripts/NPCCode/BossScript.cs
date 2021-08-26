@@ -81,7 +81,6 @@ public class BossScript : MonoBehaviour
     private void Start()
     {
         this.gameObject.SetActive(false);
-        Debug.Log(bossLevelThreeDialogue[0]);
     }
 
     private void Update()
