@@ -13,6 +13,10 @@ public class GameManager : MonoBehaviour
     public int overallSituation = 0;
     public int volume = 5;
     // overall sit determines the enviorment changes and what the mood feels like
+    // has 3 ovls
+    // 0 -> relaxed
+    // 1 -> tight
+    // 2 -> anxious
 
     // Arnold's Tolerance on others
     public int familyToleranceLevel = 0;

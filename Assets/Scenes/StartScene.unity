@@ -155,6 +155,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentSanity: 99
   maxSanity: 100
+  overallSituation: 0
+  volume: 5
   familyToleranceLevel: 0
   workToleranceLevel: 0
   sceneManager: {fileID: 432679727}
@@ -481,13 +483,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 463672566}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0.014200155, y: -0.021724343, z: -0.00542301, w: 0.99964845}
   m_LocalPosition: {x: -1.8649685, y: -6.963246, z: -3.2689447}
   m_LocalScale: {x: 17.52, y: 1, z: 9.89}
   m_Children: []
   m_Father: {fileID: 1644345641}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -1.64, y: -2.482, z: -0.586}
 --- !u!1 &657209806
 GameObject:
   m_ObjectHideFlags: 0
@@ -2445,7 +2447,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55460a97ca2af7c41b77bfabcb4da47c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1508733263}
 --- !u!1 &1541995591
 GameObject:
   m_ObjectHideFlags: 0
